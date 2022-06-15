@@ -1,0 +1,23 @@
+.box{
+    width: 75%;
+    /* border: 1px solid red; */
+    height: 350px;
+    margin: auto;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
+  .img3{
+    width: 75%;
+    height: 65%;
+  }
+  #na{
+    /* border: 1px solid red; */
+    width: 84%;
+    margin: auto;
+  }
+ .h1{
+    margin-top: 10px;
+    font-family: Roboto, Helvetica, Arial, serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+ }

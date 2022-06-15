@@ -1,0 +1,53 @@
+/* .each-slide > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    height: 350px;
+  }
+  
+  .each-slide span {
+    padding: 20px;
+    font-size: 20px;
+    background: #efefef;
+    text-align: center;
+  } */
+
+  .img{
+    width:100%;
+    height: 370px;
+  }
+  .img1{
+    width:100%;
+    height: 100%;
+  }
+  .Refer{
+    font-weight: 400;
+    font-size: 32px;
+    font-family: 'Quicksand', sans-serif;;
+  }
+  .imgs{
+      width: 100%;
+      height: 330px;
+  }
+  .imgs1{
+    width: 93%;
+    height: 100%;
+  }
+  .frame{
+    width: 100%;
+    height: 420px;
+}
+.img2{
+  width: 100%;
+  height: 330px;
+  display: flex;
+  gap: 50px;
+}
+
+.box{
+  width: 100%;
+}
+.img3{
+  width: 95%;
+}
