@@ -1,6 +1,6 @@
 import React from "react";
 import Add from "./additems/Add"
-import Style from "./Home.module.css";
+import Style from "./Home.module.css"
 
 const Part1 = () => {
   return (

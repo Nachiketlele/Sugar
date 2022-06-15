@@ -1,14 +1,13 @@
-.box{
+/* .box{
     width: 75%;
-    /* border: 1px solid red; */
     height: 350px;
     margin: auto;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  }
-  .img3{
+  } */
+  /* .img3{
     width: 75%;
     height: 65%;
-  }
+  } */
   #na{
     /* border: 1px solid red; */
     width: 84%;
@@ -21,3 +20,9 @@
     font-style: normal;
     font-weight: 400;
  }
+#w1{
+  height: 440px;
+}
+#t{
+  height: 420px;
+}
