@@ -15,6 +15,8 @@ const Part1 = () => {
       </div>
       <br />
       <br />
+      <br />
+      <br />
       <p className={Style.Refer}>AIR KISS POWDER LIPSTICK</p>
       <div className={Style.frame}>
         <iframe
@@ -31,6 +33,8 @@ const Part1 = () => {
       <br />
       <p className={Style.Refer}>BESTSELLERS</p>
       <Add/>
+      <br />
+      <br />
       <p className={Style.Refer}>QUICK BEAUTY TIPS WITH SUGAR</p>
     </div>
   );
