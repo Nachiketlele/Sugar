@@ -24,7 +24,7 @@ const MAKEUP = () => {
   
     for(let i=0;i<list2.length;++i)
     {
-      if(list2[i].love==true)
+      if(list2[i].love===true)
       favArr.push(list2[i])
     }
     localStorage.setItem("fav",JSON.stringify(favArr))

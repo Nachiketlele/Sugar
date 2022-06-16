@@ -6,11 +6,11 @@ import { GrCart } from "react-icons/gr";
 
 
 function Cart() {
-  const cart = useSelector((state) => state);
+  const cart = JSON.parse(localStorage.getItem("cartItem"))
   const dispatch = useDispatch();
   // console.log(cart.length);
   const addition = (acc, curr) => {
-    return acc + curr.price * curr.quantity;
+    return acc + curr.price * curr.qty;
   };
   const total = cart.reduce(addition, 0);
   const tax = (total * (18 / 100)).toFixed(2);
@@ -54,7 +54,7 @@ function Cart() {
               return (
                 <div className={styles.inner_div} key={item.id}>
                   <div>
-                    <img className={styles.image} src={item.imageUrl} alt="" />
+                    <img className={styles.image} src={item.src} alt="" />
                   </div>
                   <h4 className={styles.nametag}>{item.name}</h4>
                   <div className={styles.partOffun}>
@@ -62,7 +62,7 @@ function Cart() {
                       <button
                         className={styles.deleteBtn}
                         onClick={() =>
-                          dispatch({ type: "REMOVE", payload: item })
+                          dispatch({ type: "REMOVE", payload: item.id })
                         }
                       >
                         <MdDelete />
@@ -72,20 +72,20 @@ function Cart() {
                       <button
                         className={styles.btn}
                         onClick={() => {
-                          if (item.quantity > 1) {
-                            dispatch({ type: "DECREASE", payload: item });
+                          if (item.qty > 1) {
+                            dispatch({ type: "DECREASE", payload: item.id });
                           } else {
-                            dispatch({ type: "REMOVE", payload: item });
+                            dispatch({ type: "REMOVE", payload: item.id });
                           }
                         }}
                       >
                         -
                       </button>
-                      <span>{item.quantity}</span>
+                      <span>{item.qty}</span>
                       <button
                         className={styles.btn}
                         onClick={() =>
-                          dispatch({ type: "INCREASE", payload: item })
+                          dispatch({ type: "INCREASE", payload: item.id })
                         }
                       >
                         +
@@ -93,8 +93,8 @@ function Cart() {
                     </div>
                     <div>
                       <p>
-                        {item.quantity} x {item.price} ={" "}
-                        {item.price * item.quantity}
+                        {item.qty} x {item.price} ={" "}
+                        {item.price * item.qty}
                       </p>
                     </div>
                   </div>
