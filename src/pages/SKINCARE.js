@@ -28,7 +28,7 @@ const thelove=(val)=>{
 
   for(let i=0;i<list3.length;++i)
   {
-    if(list3[i].love==true)
+    if(list3[i].love===true)
     favArr.push(list3[i])
   }
   localStorage.setItem("fav",JSON.stringify(favArr))
@@ -53,7 +53,7 @@ const thelove=(val)=>{
         </div>
         <div className={styles.q5}>
           <div>Filters</div>
-          <div className={styles.q6}>
+          <div>
             <select onChange={handle}>
               <option>Sort by</option>
               <option value="1">Name</option>

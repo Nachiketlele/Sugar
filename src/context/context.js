@@ -8,6 +8,7 @@ const l1 = [
     price: 699,
     rating: "4.7(428)",
     love: false,
+    trending:true
   },
   {
     id: 2,
@@ -16,6 +17,7 @@ const l1 = [
     price: 499,
     rating: "4.6(53)",
     love: false,
+    trending:true
   },
   {
     id: 3,
@@ -24,6 +26,7 @@ const l1 = [
     price: 799,
     rating: "4.1(945)",
     love: false,
+    trending:true
   },
   {
     id: 4,
@@ -40,6 +43,7 @@ const l1 = [
     price: 499,
     rating: "4.6(188)",
     love: false,
+    trending:true
   },
   {
     id: 6,
@@ -48,6 +52,7 @@ const l1 = [
     price: 249,
     rating: "4.5(97)",
     love: false,
+    trending:true
   },
   {
     id: 7,
@@ -64,6 +69,7 @@ const l1 = [
     price: 799,
     rating: "4.9(143)",
     love: false,
+    trending:true
   },
   {
     id: 9,
@@ -72,6 +78,7 @@ const l1 = [
     price: 499,
     rating: "4.6(318)",
     love: false,
+    trending:true
   },
   {
     id: 10,
@@ -88,6 +95,7 @@ const l1 = [
     price: 349,
     rating: "4.6(73)",
     love: false,
+    trending:true
   },
   {
     id: 12,
@@ -96,6 +104,7 @@ const l1 = [
     price: 999,
     rating: "5(168)",
     love: false,
+    trending:true
   },
   {
     id: 13,

@@ -53,7 +53,7 @@ const thelove=(val)=>{
         </div>
         <div className={styles.q5}>
           <div>Filters</div>
-          <div className={styles.q6}>
+          <div>
             <select onChange={handle}>
               <option>Sort by</option>
               <option value="1">Name</option>
@@ -67,7 +67,7 @@ const thelove=(val)=>{
     <div className={styles.q1}>
         {list1.map(e=>(
         <div className={styles.q6} key={e.id}>
-        <div className={styles.q2}>    <img src={e.src} alt="no"/>  <p>{e.name}</p>  <p>Rs:{e.price}</p> <div className={styles.q8} >  <img src={img1} alt='no' id={styles.e1}/>   <p>{e.rating}</p>  <img id={styles.e1} src={!e.love?"https://th.bing.com/th/id/R.5365673f66386551fa6df965535bcfa1?rik=UzbBo%2bjcduyTuQ&riu=http%3a%2f%2fwww.clipartbest.com%2fcliparts%2fKTn%2fXnM%2fKTnXnMAgc.png&ehk=vhGmsnENrQL2IH%2f9jIOSj8tJvVOxXNRhYqiiQMzUQGw%3d&risl=&pid=ImgRaw&r=0":"https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/1200px-Heart_coraz%C3%B3n.svg.png"} alt='no' onClick={()=>thelove(e.id)}/></div> 
+        <div className={styles.q2}>    <img src={e.src} alt="no"/>  <p className={styles.name}>{e.name}</p>  <p className={styles.price}>₹ {e.price}</p> <div className={styles.q8} >  <img src={img1} alt='no' id={styles.e1}/>   <p className={styles.rating}>{e.rating}</p>  <img id={styles.e1} src={!e.love?"https://th.bing.com/th/id/R.5365673f66386551fa6df965535bcfa1?rik=UzbBo%2bjcduyTuQ&riu=http%3a%2f%2fwww.clipartbest.com%2fcliparts%2fKTn%2fXnM%2fKTnXnMAgc.png&ehk=vhGmsnENrQL2IH%2f9jIOSj8tJvVOxXNRhYqiiQMzUQGw%3d&risl=&pid=ImgRaw&r=0":"https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/1200px-Heart_coraz%C3%B3n.svg.png"} alt='no' onClick={()=>thelove(e.id)}/></div> 
         <div className={styles.q7} onClick={()=>handleadd(e.id)}>ADD TO CART </div>
         </div>
         </div>))}

@@ -53,7 +53,7 @@ const thelove=(val)=>{
         </div>
         <div className={styles.q5}>
           <div>Filters</div>
-          <div className={styles.q6}>
+          <div>
             <select onChange={handle}>
               <option>Sort by</option>
               <option value="1">Name</option>

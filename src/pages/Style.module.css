@@ -1,18 +1,18 @@
 img {
   margin-top: 25px;
-  height: 250px;
-  width: 200px;
+  height: 200px;
+  width: 180px;
 }
 .q1 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;
-  width: 80%;
+  width: 87%;
   margin: auto;
 }
 .q2 {
   background-color: #ffffff;
-  height: 470px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -23,6 +23,10 @@ img {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   transform: scale(1.05);
 }
+.q2 p,img{
+  background-color:#ffffff;
+}
+
 .q3 {
   background-color: #f5f5f5;
 }
@@ -37,6 +41,10 @@ img {
   display: flex;
   justify-content: space-between;
 }
+
+.q6:hover .q7{
+  visibility: visible;
+}
 .q7 {
   background-color: black;
   color: #ffffff;
@@ -44,14 +52,15 @@ img {
   height: 40px;
   cursor: pointer;
   padding-top: 8px;
+  visibility: hidden;
 }
 .q7:hover {
   background-color: #fc2779;
 }
 #e1 {
-  height: 25px;
-  width: 25px;
-  margin-top: -16px;
+  height: 20px;
+  width: 20px;
+  margin-top: -5px;
 }
 #e1:hover {
   cursor: pointer;
@@ -59,5 +68,30 @@ img {
 .q8 {
   display: flex;
   align-items: center;
+  background-color:#ffffff;
+  width: 40%;
+  justify-content: space-around;
 }
 
+.name{
+  color: #808080;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 20px;
+  padding: 0px 15px 0px 15px;
+  font-family: Roboto, Helvetica, Arial, serif;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+.price{
+  color: #808080;
+  font-size: 15px;
+  font-family: Roboto, Helvetica, Arial, serif;
+  margin-bottom: 5px;
+}
+.rating{
+  color: #808080;
+  font-size: 12px;
+  font-family: Roboto, Helvetica, Arial, serif;
+  margin-bottom: 5px;
+}
