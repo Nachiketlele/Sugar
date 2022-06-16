@@ -1,5 +1,6 @@
 import { createContext, useState } from "react";
 
+
 const l1 = [
   {
     id: 1,
@@ -327,6 +328,7 @@ const l3 = [
   },
 ];
 
+
 let addItems = [
   {
     image:
@@ -537,6 +539,15 @@ const slideImages3 = [
     id: 3,
   },
 ];
+
+localStorage.setItem("list1",JSON.stringify(l1))
+localStorage.setItem("list2",JSON.stringify(l2))
+localStorage.setItem("list3",JSON.stringify(l3))
+
+let l11=JSON.parse(localStorage.getItem("list1"))
+let l12=JSON.parse(localStorage.getItem("list2"))
+let l13=JSON.parse(localStorage.getItem("list3"))
+
 
 const slideImages4 = [
   {
@@ -811,9 +822,10 @@ let sugarbeauty = [
 ];
 export const Box = createContext();
 export const BoxProvider = ({ children }) => {
-  const [list1, setlist1] = useState(l1);
-  const [list2, setlist2] = useState(l2);
-  const [list3, setlist3] = useState(l3);
+const [list1, setlist1] = useState(l11)
+const [list2, setlist2] = useState(l12)
+const [list3, setlist3] = useState(l13)
+
 
   const [sortval, setsortval] = useState(0);
   const time = (l) => {
