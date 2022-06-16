@@ -1,0 +1,187 @@
+.universal {
+  padding: 15px;
+}
+.cartContainer {
+  display: flex;
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.outer_div {
+  /* border: 1px solid; */
+  margin-left: -640px;
+}
+.btn_div {
+  display: flex;
+  height: 20px;
+  gap: 5px;
+}
+.inner_div {
+  display: flex;
+  height: 150px;
+  justify-content: space-between;
+  align-items: center;
+  width: 600px;
+}
+.partOffun {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.image {
+  height: 100px;
+  width: 100%;
+  border-radius: 2px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.btn {
+  border-radius: 50%;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+.nametag {
+  padding-bottom: 50px;
+  text-align: left;
+  width: 200px;
+}
+.deleteBtn {
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+.nothingInCart {
+  height: 300px;
+  width: 290px;
+  text-align: center;
+  margin: auto;
+  margin-top: 100px;
+  /* padding: 60px; */
+}
+.nothingInCart > img {
+  height: 150px;
+}
+.shopnowBTN {
+  margin-top: 10px;
+  height: 35px;
+  width: 60%;
+  background-color: #fc2779;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+.ptag_div > p {
+  padding: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: grey;
+}
+.orderSummary {
+  display: flex;
+}
+
+.orderSummaryInner1 > p {
+  margin-top: -35px;
+  text-align: left;
+  margin-left: 10px;
+  width: 140px;
+  /* border: 1px solid red; */
+}
+.orderSummaryInner2 {
+  margin-top: -50px;
+  padding-left: 300px;
+}
+.orderSummaryInner2 > p {
+  text-decoration: underline;
+  /* border: 1px solid red; */
+  width: 200px;
+}
+/* .cartTotalBox {
+  border: 1px solid red;
+} */
+.offerSection > p {
+  margin-top: -32px;
+  margin-left: -410px;
+  /* border: 1px solid red; */
+}
+.selectPromo {
+  height: 40px;
+  width: 640px;
+  border: none;
+  color: #fc2779;
+  font-size: large;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.offerPrice_div {
+  /* border: 1px solid red; */
+  margin-left: 40px;
+  margin-top: 20px;
+}
+.applyPromo {
+  display: flex;
+  /* border: 1px solid red; */
+  margin-left: 40px;
+  width: 450px;
+  justify-content: space-around;
+  align-items: center;
+}
+.applyPromoInput {
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
+    rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+.applyPromoBtn {
+  margin-left: -17px;
+  height: 33px;
+  border-radius: 5px;
+  color: #fc2779;
+  border: none;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
+    rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+.priceDetails {
+  display: flex;
+  /* border: 1px solid; */
+  width: 120px;
+  justify-content: space-around;
+  margin-left: 40px;
+}
+.cartPriceDetails {
+  display: flex;
+  width: 230px;
+  gap: 10px;
+  margin-left: 70px;
+  margin-bottom: -20px;
+  font-weight: 100;
+}
+.tax{
+  margin-left: -320px;
+  font-weight: 100;
+}
+.delhivery{
+margin-top: 20px;
+/* border: 1px solid red; */
+margin-left: 40px;
+}
+.delhiveryBTN{
+  width: 500px;
+  height: 30px;
+  background-color: black;
+  color: white;
+}
+.continueShop{
+  height: 30px;
+  text-decoration: underline;
+  font-weight: 100;
+}
+p{
+  font-weight: 100;
+}
+option{
+  color: #fc2779;
+}
