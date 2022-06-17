@@ -11,6 +11,7 @@ const Navbar = () => {
         <Link to="/trending">TRENDING</Link>
         <Link to='/cart'>Cart</Link>
         <Link to='/map'>Map</Link>
+        <Link to='/wishlist'>Wishlist</Link>
     </div>
   )
 }

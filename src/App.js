@@ -7,6 +7,7 @@ import MAKEUP from './pages/MAKEUP';
 import Map from './pages/Map';
 import SKINCARE from './pages/SKINCARE';
 import TRENDING from './pages/TRENDING';
+import Wishlist from './pages/Wishlist';
 
 
 
@@ -22,6 +23,7 @@ function App() {
         <Route path='/trending' element={<TRENDING/>}>TRENDING</Route>
         <Route path='/cart' element={<Cart/>}/>
         <Route path='/map' element={<Map/>}/>
+        <Route path='/wishlist' element={<Wishlist/>}/>
       </Routes>
     </div>
   );
