@@ -3,33 +3,43 @@ import { useDispatch, useSelector } from "react-redux";
 import { MdDelete } from "react-icons/md";
 import styles from "./cartStyles.module.css";
 import { GrCart } from "react-icons/gr";
-
-
+import { useNavigate } from "react-router-dom";
 function Cart() {
-  const cart = JSON.parse(localStorage.getItem("cartItem"))
+  const cart = useSelector((state) => state);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const handleNavigate = () => {
+    navigate("/");
+  };
+
   // console.log(cart.length);
   const addition = (acc, curr) => {
-    return acc + curr.price * curr.qty;
+    return acc + curr.price * curr.quantity;
   };
   const total = cart.reduce(addition, 0);
   const tax = (total * (18 / 100)).toFixed(2);
   if (cart.length === 0) {
     return (
       <div className={styles.nothingInCart}>
-        <img src="https://in.sugarcosmetics.com/ic_empty_cart.png" alt="" />
+        <img
+          className={styles.nothingInCartIMG}
+          src="https://in.sugarcosmetics.com/ic_empty_cart.png"
+          alt=""
+        />
         <div className={styles.ptag_div}>
-          <p>
+          <p className={styles.ptag_div_p}>
             <i>Hey! It's lonely here.</i>
           </p>
-          <p>
+          <p className={styles.ptag_div_p}>
             <i>Your bag seems to have no company.</i>
           </p>
-          <p>
+          <p className={styles.ptag_div_p}>
             <i>Why not add some products?</i>
           </p>
         </div>
-        <button className={styles.shopnowBTN}>SHOP NOW</button>
+        <button onClick={handleNavigate} className={styles.shopnowBTN}>
+          SHOP NOW
+        </button>
       </div>
     );
   }
@@ -39,14 +49,18 @@ function Cart() {
         <div className={styles.cartContainer}>
           <div className={styles.orderSummary}>
             <div className={styles.orderSummaryInner1}>
-              <p>
-                <GrCart />
-                {"   "}
-                Order Summary
-              </p>
+              <div className={styles.orderSummaryInner1_div}>
+                <p className={styles.orderSummaryInner1_p}>
+                  <GrCart />
+                  {"   "}
+                  Order Summary
+                </p>
+              </div>
             </div>
             <div className={styles.orderSummaryInner2}>
-              <p>Cart Total : Rs. {total}.00</p>
+              <p className={styles.orderSummaryInner2_p}>
+                Cart Total : Rs. {total}.00
+              </p>
             </div>
           </div>
           <div className={styles.outer_div}>
@@ -54,15 +68,19 @@ function Cart() {
               return (
                 <div className={styles.inner_div} key={item.id}>
                   <div>
-                    <img className={styles.image} src={item.src} alt="" />
+                    <img
+                      className={styles.image}
+                      src={item.src || item.image}
+                      alt=""
+                    />
                   </div>
-                  <h4 className={styles.nametag}>{item.name}</h4>
+                  <h6 className={styles.nametag}>{item.name}</h6>
                   <div className={styles.partOffun}>
                     <div>
                       <button
                         className={styles.deleteBtn}
                         onClick={() =>
-                          dispatch({ type: "REMOVE", payload: item.id })
+                          dispatch({ type: "REMOVE", payload: item })
                         }
                       >
                         <MdDelete />
@@ -72,29 +90,29 @@ function Cart() {
                       <button
                         className={styles.btn}
                         onClick={() => {
-                          if (item.qty > 1) {
-                            dispatch({ type: "DECREASE", payload: item.id });
+                          if (item.quantity > 1) {
+                            dispatch({ type: "DECREASE", payload: item });
                           } else {
-                            dispatch({ type: "REMOVE", payload: item.id });
+                            dispatch({ type: "REMOVE", payload: item });
                           }
                         }}
                       >
                         -
                       </button>
-                      <span>{item.qty}</span>
+                      <span>{item.quantity}</span>
                       <button
                         className={styles.btn}
                         onClick={() =>
-                          dispatch({ type: "INCREASE", payload: item.id })
+                          dispatch({ type: "INCREASE", payload: item })
                         }
                       >
                         +
                       </button>
                     </div>
-                    <div>
+                    <div className={styles.findAmount}>
                       <p>
-                        {item.qty} x {item.price} ={" "}
-                        {item.price * item.qty}
+                        {item.quantity} x {item.price} ={" "}
+                        {item.price * item.quantity}
                       </p>
                     </div>
                   </div>
@@ -104,13 +122,12 @@ function Cart() {
           </div>
           <div className={styles.cartTotalBox}>
             <div className={styles.offerSection}>
-              <p>
-                <img
-                  src="https://in.sugarcosmetics.com/desc-images/Offers_price_details.svg"
-                  alt=""
-                />
-                {"  "}Offers and Price Details
-              </p>
+              <img
+                className={styles.offerSectionIMG}
+                src="https://in.sugarcosmetics.com/desc-images/Offers_price_details.svg"
+                alt=""
+              />
+              <p className={styles.offerSection_p}>Offers and Price Details</p>
             </div>
             <div className={styles.offerPrice_div}>
               <select className={styles.selectPromo}>
@@ -123,10 +140,11 @@ function Cart() {
             </div>
             <div className={styles.applyPromo}>
               <img
+                className={styles.applyPromoIMG}
                 src="https://in.sugarcosmetics.com/desc-images/GiftCard.svg"
                 alt=""
               />
-              <p>Gift Card/Discount Code</p>
+              <p className={styles.applyPromo_P}>Gift Card/Discount Code</p>
               <input
                 className={styles.applyPromoInput}
                 type="text"
@@ -136,42 +154,47 @@ function Cart() {
             </div>
             <div className={styles.priceDetails}>
               <img
+                className={styles.priceDetailsIMG}
                 src="https://in.sugarcosmetics.com/desc-images/PriceDetails.svg"
                 alt=""
               />
-              <p>Price Details</p>
+              <p className={styles.priceDetails_P}>Price Details</p>
             </div>
             <div>
               <div className={styles.cartPriceDetails}>
                 <img
+                  className={styles.cartPriceDetailsIMG}
                   src="https://in.sugarcosmetics.com/desc-images/CartSubtotal.svg"
                   alt=""
                 />
-                <p>Cart Sub Total:</p>
+                <p className={styles.cartPriceDetails_p}>Cart Sub Total:</p>
                 <p>₹ {total}.00</p>
               </div>
               <div className={styles.cartPriceDetails}>
                 <img
+                  className={styles.cartPriceDetailsIMG}
                   src="https://in.sugarcosmetics.com/desc-images/Shipping_Cost.svg"
                   alt=""
                 />
-                <p>Shipping Cost:</p>
+                <p className={styles.cartPriceDetails_p}>Shipping Cost:</p>
                 <p>₹ 0.00</p>
               </div>
               <div className={styles.cartPriceDetails}>
                 <img
+                  className={styles.cartPriceDetailsIMG}
                   src="https://in.sugarcosmetics.com/desc-images/Discount.svg"
                   alt=""
                 />
-                <p>Discount Applied:</p>
+                <p className={styles.cartPriceDetails_p}>Discount Applied:</p>
                 <p>₹ 0.00</p>
               </div>
               <div className={styles.cartPriceDetails}>
                 <img
+                  className={styles.cartPriceDetailsIMG}
                   src="https://in.sugarcosmetics.com/desc-images/CartSubtotal.svg"
                   alt=""
                 />
-                <p>Amount Payable:</p>
+                <p className={styles.cartPriceDetails_p}>Amount Payable:</p>
                 <p>₹ {total}.00</p>
               </div>
               <i className={styles.tax}>Including ₹{tax} in taxes</i>
@@ -179,7 +202,9 @@ function Cart() {
                 <button className={styles.continueShop}>
                   <span>{"<"}</span> Continue Shoping
                 </button>
-                <button className={styles.delhiveryBTN}>Delhivery Information</button>
+                <button className={styles.delhiveryBTN}>
+                  Delhivery Information
+                </button>
               </div>
             </div>
           </div>

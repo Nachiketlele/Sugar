@@ -3,22 +3,28 @@
 }
 .cartContainer {
   display: flex;
+
   padding: 50px;
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .outer_div {
-  /* border: 1px solid; */
-  margin-left: -640px;
+  margin-left: -660px;
 }
 .btn_div {
   display: flex;
   height: 20px;
   gap: 5px;
+
+  align-items: center;
+}
+.findAmount {
+  margin-top: 10px;
 }
 .inner_div {
   display: flex;
+
   height: 150px;
   justify-content: space-between;
   align-items: center;
@@ -26,6 +32,7 @@
 }
 .partOffun {
   display: flex;
+
   justify-content: center;
   align-items: center;
   gap: 10px;
@@ -33,6 +40,7 @@
 .image {
   height: 100px;
   width: 100%;
+
   border-radius: 2px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
@@ -43,7 +51,6 @@
   cursor: pointer;
 }
 .nametag {
-  padding-bottom: 50px;
   text-align: left;
   width: 200px;
 }
@@ -55,12 +62,12 @@
 .nothingInCart {
   height: 300px;
   width: 290px;
+
   text-align: center;
   margin: auto;
   margin-top: 100px;
-  /* padding: 60px; */
 }
-.nothingInCart > img {
+.nothingInCartIMG {
   height: 150px;
 }
 .shopnowBTN {
@@ -72,39 +79,54 @@
   border-radius: 5px;
   color: white;
 }
-.ptag_div > p {
+.ptag_div_p {
   padding: 0px;
   margin-top: 0px;
   margin-bottom: 0px;
+
   color: grey;
 }
 .orderSummary {
   display: flex;
 }
 
-.orderSummaryInner1 > p {
+.orderSummaryInner1_p {
   margin-top: -35px;
-  text-align: left;
-  margin-left: 10px;
+
   width: 140px;
-  /* border: 1px solid red; */
 }
 .orderSummaryInner2 {
-  margin-top: -50px;
+  margin-top: -30px;
   padding-left: 300px;
 }
-.orderSummaryInner2 > p {
+.orderSummaryInner2_p {
   text-decoration: underline;
-  /* border: 1px solid red; */
-  width: 200px;
+
+  width: 230px;
+  padding-right: 68px;
 }
 /* .cartTotalBox {
   border: 1px solid red;
 } */
-.offerSection > p {
+.offerSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 260px;
+}
+.offerSection_p {
   margin-top: -32px;
-  margin-left: -410px;
-  /* border: 1px solid red; */
+  margin-left: -70px;
+  width: 180px;
+  margin-bottom: 20px;
+}
+.offerSectionIMG {
+  height: 20px;
+  border: none;
+  margin-top: -50px;
+  background-color: #f5f5f5;
+  margin-left: -20px;
+  width: 160px;
 }
 .selectPromo {
   height: 40px;
@@ -112,24 +134,32 @@
   border: none;
   color: #fc2779;
   font-size: large;
-  padding: 10px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 .offerPrice_div {
-  /* border: 1px solid red; */
   margin-left: 40px;
   margin-top: 20px;
 }
 .applyPromo {
   display: flex;
-  /* border: 1px solid red; */
+
   margin-left: 40px;
-  width: 450px;
-  justify-content: space-around;
-  align-items: center;
+  width: 550px;
+}
+
+.applyPromoIMG {
+  height: 20px;
+  margin-left: -44px;
+  background-color: #f5f5f5;
+}
+.applyPromo_P {
+  text-align: left;
+  margin-top: 25px;
+  margin-left: -80px;
 }
 .applyPromoInput {
   height: 30px;
+  margin-top: 23px;
   border: none;
   border-radius: 5px;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
@@ -137,7 +167,8 @@
 }
 .applyPromoBtn {
   margin-left: -17px;
-  height: 33px;
+  height: 30px;
+  margin-top: 23px;
   border-radius: 5px;
   color: #fc2779;
   border: none;
@@ -146,42 +177,63 @@
 }
 .priceDetails {
   display: flex;
-  /* border: 1px solid; */
-  width: 120px;
-  justify-content: space-around;
-  margin-left: 40px;
+
+  width: 200px;
+
+  margin-left: 20px;
+}
+.priceDetailsIMG {
+  height: 20px;
+  margin-top: -0px;
+  margin-left: -10px;
+  background-color: #f5f5f5;
+}
+.priceDetails_P {
+  margin-left: -80px;
 }
 .cartPriceDetails {
   display: flex;
-  width: 230px;
+
   gap: 10px;
   margin-left: 70px;
-  margin-bottom: -20px;
+
+  font-weight: 100;
+  height: 30px;
+}
+.cartPriceDetailsIMG {
+  height: 20px;
+  margin-top: -0px;
+  margin-left: -40px;
+  background-color: #f5f5f5;
+}
+.cartPriceDetails_p {
+  margin-left: -85px;
+}
+.tax {
+  margin-left: -210px;
   font-weight: 100;
 }
-.tax{
-  margin-left: -320px;
-  font-weight: 100;
+.delhivery {
+  margin-top: 20px;
+
+  margin-left: 40px;
+  display: flex;
 }
-.delhivery{
-margin-top: 20px;
-/* border: 1px solid red; */
-margin-left: 40px;
-}
-.delhiveryBTN{
-  width: 500px;
+.delhiveryBTN {
+  width: 450px;
   height: 30px;
   background-color: black;
   color: white;
 }
-.continueShop{
+.continueShop {
   height: 30px;
   text-decoration: underline;
   font-weight: 100;
+  width: 200px;
 }
-p{
+p {
   font-weight: 100;
 }
-option{
+option {
   color: #fc2779;
 }
