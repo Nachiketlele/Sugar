@@ -1,8 +1,10 @@
-import React, { useContext, useEffect, useState } from "react";
-import { Box } from "../context/context";
-import styles from "./Style.module.css";
-import img1 from "./star_filled.png";
-import { useDispatch } from "react-redux";
+import React, { useContext, useEffect, useState } from 'react'
+import { Box } from '../context/context';
+import styles from './Style.module.css'
+import img1 from "./star_filled.png"
+import { useDispatch } from 'react-redux';
+import img3 from "./filterIcon.png"
+import { useNavigate } from 'react-router-dom';
 
 const SKINCARE = () => {
   const { time, setsortval } = useContext(Box);
@@ -31,37 +33,35 @@ const SKINCARE = () => {
 
   time(list3);
 
+  const navigate= useNavigate();
+
   return (
     <div>
-      <div className={styles.q13}>
-        <div className={styles.q12}></div>
-        <img
-          className={styles.q9}
-          src="https://images-static.nykaa.com/uploads/b6edd81b-a84a-4e09-b24e-a2129d3c6059.jpg?tr=w-1200,cm-pad_resize"
-          alt="no"
-        />
-        <div className={styles.q12}></div>
-      </div>
-      <div className={styles.q3}>
-        <div className={styles.q4}>
-          <div>
-            <div>sgdsfg</div>
-            <br></br>
-            <div>Skin Care Products - 44 items</div>
-          </div>
-          <div className={styles.q5}>
-            <div>Filters</div>
-            <div>
-              <select onChange={handle}>
-                <option>Sort by</option>
-                <option value="1">Name</option>
-                <option value="2">Price - High to Low</option>
-                <option value="3">Price - Low to High</option>
-              </select>
-            </div>
-          </div>
-        </div>
-        <br />
+    <div className={styles.q13}> 
+   <div className={styles.q12}></div>
+   <img className={styles.q9} src='https://images-static.nykaa.com/uploads/b6edd81b-a84a-4e09-b24e-a2129d3c6059.jpg?tr=w-1200,cm-pad_resize' alt='no'/>
+   <div className={styles.q12}></div>
+   </div>
+   <div className={styles.q3}>
+   <div className={styles.q4}>
+       <div>
+       <div style={{display:"flex"}}><img style={{marginTop:"3px"}} onClick={()=>navigate("/")} src='https://in.sugarcosmetics.com/desc-images/breadcrumb_home.svg' id={styles.e1} alt="no"/><p> / Skincare</p></div>
+         <br></br>
+         <div>Skin Care Products - 44 items</div>
+       </div>
+       <div className={styles.q5}>
+       <div style={{display:"flex"}}><img style={{marginTop:"3px"}} src='https://in.sugarcosmetics.com/desc-images/filterIcon.png' id={styles.e1} alt="no" /><p>Filter</p></div>
+         <div>
+           <select onChange={handle}>
+             <option>Sort by</option>
+             <option value="1">Name</option>
+             <option value="2">Price - High to Low</option>
+             <option value="3">Price - Low to High</option>
+           </select>
+         </div>
+       </div>
+   </div>
+   <br/>
         <div className={styles.q1}>
           {list3.map((e) => {
             e.quantity = 1;

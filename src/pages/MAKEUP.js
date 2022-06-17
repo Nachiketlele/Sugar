@@ -1,8 +1,11 @@
-import React, { useContext, useEffect, useState } from "react";
-import { Box } from "../context/context";
-import styles from "./Style.module.css";
-import img1 from "./star_filled.png";
-import { useDispatch } from "react-redux";
+import React, { useContext, useEffect, useState } from 'react'
+import { Box } from '../context/context';
+import styles from './Style.module.css'
+import img1 from "./star_filled.png"
+import { useDispatch } from 'react-redux';
+import img2 from './imq1.gif'
+import img3 from "./filterIcon.png"
+import { useNavigate } from 'react-router-dom';
 
 const MAKEUP = () => {
   const { time, setsortval } = useContext(Box);
@@ -30,18 +33,26 @@ const MAKEUP = () => {
   };
 
   time(list2);
+  const navigate= useNavigate();
+
 
   return (
+    <div>
+    <div>
+      <img className={styles.q10} src={img2} alt='no'></img>
+    <img className={styles.q9} src='https://d32baadbbpueqt.cloudfront.net/Collection/6a68d77f-80b5-4860-9a4d-6005844c937d.jpg' alt='no'/>
+    <img className={styles.q10} src={img2} alt='no'></img>
+    </div>
     <div className={styles.q3}>
-      <div className={styles.q4}>
+    <div className={styles.q4}>
         <div>
-          <div>sgdsfg</div>
+        <div style={{display:"flex"}}><img onClick={()=>navigate("/")} style={{marginTop:"3px"}} src='https://in.sugarcosmetics.com/desc-images/breadcrumb_home.svg' id={styles.e1} alt="no"/><p> / Makeup</p></div>
           <br></br>
-          <div>dsfgdgdfg</div>
+          <div>Makeup - 56 items</div>
         </div>
         <div className={styles.q5}>
-          <div>Filters</div>
-          <div className={styles.q6}>
+        <div style={{display:"flex"}}><img style={{marginTop:"3px"}} src='https://in.sugarcosmetics.com/desc-images/filterIcon.png' id={styles.e1} alt="no" /><p>Filter</p></div>
+          <div>
             <select onChange={handle}>
               <option>Sort by</option>
               <option value="1">Name</option>
@@ -50,8 +61,8 @@ const MAKEUP = () => {
             </select>
           </div>
         </div>
-      </div>
-      <br />
+    </div>
+    <br/>
       <div className={styles.q1}>
         {list2.map((e) => {
           e.quantity = 1;
@@ -85,6 +96,7 @@ const MAKEUP = () => {
           );
         })}
       </div>
+    </div>
     </div>
   );
 };
