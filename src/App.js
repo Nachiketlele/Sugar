@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import BRUSHES from './pages/BRUSHES';
 import Cart from './pages/Cart';
 import MAKEUP from './pages/MAKEUP';
+import Map from './pages/Map';
 import SKINCARE from './pages/SKINCARE';
 import TRENDING from './pages/TRENDING';
 
@@ -20,6 +21,7 @@ function App() {
         <Route path='/skincare' element={<SKINCARE/>}>SKINCARE</Route>
         <Route path='/trending' element={<TRENDING/>}>TRENDING</Route>
         <Route path='/cart' element={<Cart/>}/>
+        <Route path='/map' element={<Map/>}/>
       </Routes>
     </div>
   );
