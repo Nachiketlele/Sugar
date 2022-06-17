@@ -7,6 +7,17 @@ import { useContext } from "react";
 import { Box } from "../context/context";
 import Addss from "./additems/Addss";
 import { Box1 } from "../context/prop.context";
+import ReactPlayer from 'react-player'
+import girl1 from './1.mp4'
+import girl2 from './2.mp4'
+import girl3 from './3.mp4'
+import girl4 from './4.mp4'
+import girl5 from './5.mp4'
+import girl6 from './6.mp4'
+import girl7 from './7.mp4'
+import girl8 from './8.mp4'
+import girl9 from './9.mp4'
+import girl10 from './10.mp4'
 
 
 //************************************************* */
@@ -43,6 +54,99 @@ const Part2 = () => {
       </Slide>
       <br />
       <br />
+      
+
+
+      <p className={Style.Refer}>SUGAR STREAMING</p>
+      <div className={Style.frame2}>
+      <div className={Style.frame1}>
+         <iframe
+          width="100%"
+          height="100%"
+          src={girl1}
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+        </div>   
+
+        <div className={Style.frame1}>
+         <iframe
+          width="100%"
+          height="100%"
+          src={girl2}
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+        </div> 
+
+        <div className={Style.frame1}>
+         <iframe
+          width="100%"
+          height="100%"
+          src={girl3}
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+        </div> 
+
+        <div className={Style.frame1}>
+         <iframe
+          width="100%"
+          height="100%"
+          src={girl4}
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+        </div> 
+
+        <div className={Style.frame1}>
+         <iframe
+          width="100%"
+          height="100%"
+          src={girl5}
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+        </div> 
+
+        <div className={Style.frame1}>
+         <iframe
+          width="100%"
+          height="100%"
+          src={girl6}
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+        </div> 
+        <div className={Style.frame1}>
+         <iframe
+          width="100%"
+          height="100%"
+          src={girl7}
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+        </div> 
+         
+      </div>
+      <br/>
+      <br/>
+
+
       <div>
       <Adds />
       </div>

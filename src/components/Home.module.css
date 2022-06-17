@@ -61,3 +61,15 @@
   width: 95%;
   height: 90%;
 }
+.frame1{
+  width: 14%;
+  height: 377px;
+  transform: translateZ(0px);
+  /* border: 3px solid red; */
+-moz-border-radius: 15px;
+border-radius: 20px;
+overflow: hidden;
+}
+.frame2{
+  display: flex;
+}
