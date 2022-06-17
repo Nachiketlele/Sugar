@@ -4,6 +4,7 @@ import { MdDelete } from "react-icons/md";
 import styles from "./cartStyles.module.css";
 import { GrCart } from "react-icons/gr";
 import { useNavigate } from "react-router-dom";
+import styles1 from "./Style.module.css";
 function Cart() {
   const cart = useSelector((state) => state);
   const dispatch = useDispatch();
@@ -20,6 +21,9 @@ function Cart() {
   const tax = (total * (18 / 100)).toFixed(2);
   if (cart.length === 0) {
     return (
+      <div>
+        <div style={{display:"flex",padding:"0px 0px 0px 100px"}}><img style={{marginTop:"3px"}} src='https://in.sugarcosmetics.com/desc-images/breadcrumb_home.svg' id={styles1.e1} alt="no" onClick={()=>navigate("/")}/><p> / Cart</p></div>
+      
       <div className={styles.nothingInCart}>
         <img
           className={styles.nothingInCartIMG}
@@ -41,10 +45,13 @@ function Cart() {
           SHOP NOW
         </button>
       </div>
+      </div>
     );
   }
   return (
-    <div className={styles.universal}>
+    <div>
+      <div style={{display:"flex",padding:"0px 0px 0px 100px"}}><img style={{marginTop:"3px"}} src='https://in.sugarcosmetics.com/desc-images/breadcrumb_home.svg' id={styles1.e1} alt="no" onClick={()=>navigate("/")}/><p> / Cart</p></div>
+       <div className={styles.universal}>
       <div>
         <div className={styles.cartContainer}>
           <div className={styles.orderSummary}>
@@ -211,6 +218,7 @@ function Cart() {
         </div>
       </div>
       {/* {total > 0 && <h2>Total: {total}</h2>} */}
+    </div>
     </div>
   );
 }
