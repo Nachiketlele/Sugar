@@ -4,6 +4,7 @@ import styles from './Style.module.css'
 import img1 from "./star_filled.png"
 import { useDispatch } from 'react-redux';
 import img2 from './imq1.gif'
+import img3 from "./filterIcon.png"
 
 const MAKEUP = () => {
 const {time,setsortval}=useContext(Box);
@@ -55,7 +56,7 @@ const thelove=(val)=>{
         <div>
           <div>sgdsfg</div>
           <br></br>
-          <div>dsfgdgdfg</div>
+          <div>Makeup - 56 items</div>
         </div>
         <div className={styles.q5}>
           <div>Filters</div>

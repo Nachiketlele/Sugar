@@ -4,6 +4,7 @@ import styles from './Style.module.css'
 import img1 from "./star_filled.png"
 import { useDispatch } from 'react-redux';
 import img2 from './imq1.gif'
+import img3 from "./filterIcon.png"
 
 const TRENDING = () => {
 const {time,setsortval}=useContext(Box);
@@ -53,12 +54,12 @@ const thelove=(val)=>{
     <div className={styles.q3}>
     <div className={styles.q4}>
         <div>
-          <div>sgdsfg</div>
+        <div style={{display:"flex"}}><img style={{marginTop:"3px"}} src='https://in.sugarcosmetics.com/desc-images/breadcrumb_home.svg' id={styles.e1} alt="no"/><p> / Trending</p></div>
           <br></br>
-          <div>dsfgdgdfg</div>
+          <div>Trending - 56 items</div>
         </div>
         <div className={styles.q5}>
-          <div>Filters</div>
+          <div style={{display:"flex"}}><img style={{marginTop:"3px"}} src={img3} id={styles.e1} alt="no"/><p>Filters</p></div>
           <div>
             <select onChange={handle}>
               <option>Sort by</option>
