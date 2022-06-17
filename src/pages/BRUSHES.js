@@ -3,7 +3,7 @@ import { Box } from '../context/context';
 import styles from './Style.module.css'
 import img1 from "./star_filled.png"
 import { useDispatch } from 'react-redux';
-
+import img2 from "./imq2.jpg"
 
 const BRUSHES = () => {
 const {time,setsortval}=useContext(Box);
@@ -44,6 +44,13 @@ const thelove=(val)=>{
 
 
   return (
+    <div>
+      <div>
+        
+      <img className={styles.q11} src={img2} alt='no'/>
+      
+      </div>
+    
     <div className={styles.q3}>
     <div className={styles.q4}>
         <div>
@@ -71,6 +78,7 @@ const thelove=(val)=>{
         <div className={styles.q7} onClick={()=>handleadd(e.id)}>ADD TO CART </div>
         </div>
         </div>))}
+    </div>
     </div>
     </div>
   )

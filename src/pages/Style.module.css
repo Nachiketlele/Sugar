@@ -95,3 +95,25 @@ img {
   font-family: Roboto, Helvetica, Arial, serif;
   margin-bottom: 5px;
 }
+.q9{
+  width:80%;
+  height:250px;
+}
+.q10{
+  height:250px;
+  width:10%;
+}
+.q11{
+  width:100%;
+  height: 100%;
+}
+.q12{
+  background-color: #d4eef5;
+  height:250px;
+  width:10%;
+  margin-top: 25px;
+}
+.q13{
+  display: flex;
+  align-items: center;
+}
