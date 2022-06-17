@@ -31,8 +31,6 @@ const MAKEUP = () => {
 
   time(list2);
 
-
-
   return (
     <div className={styles.q3}>
       <div className={styles.q4}>
@@ -43,7 +41,7 @@ const MAKEUP = () => {
         </div>
         <div className={styles.q5}>
           <div>Filters</div>
-          <div>
+          <div className={styles.q6}>
             <select onChange={handle}>
               <option>Sort by</option>
               <option value="1">Name</option>
@@ -61,7 +59,7 @@ const MAKEUP = () => {
             <div className={styles.q6} key={e.id}>
               <div className={styles.q2}>
                 {" "}
-                <img src={e.src} alt="no" /> <p>{e.name}</p> <p>{e.price}</p>{" "}
+                <img src={e.src} alt="no" /> <p>{e.name}</p> <p>Rs:{e.price}</p>{" "}
                 <div className={styles.q8}>
                   {" "}
                   <img src={img1} alt="no" id={styles.e1} /> <p>{e.rating}</p>{" "}
