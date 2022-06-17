@@ -5,6 +5,7 @@ import img1 from "./star_filled.png";
 import { useDispatch } from "react-redux";
 import img2 from "./imq2.jpg"
 import img3 from "./filterIcon.png"
+import { useNavigate } from "react-router-dom";
 const BRUSHES = () => {
   const { time, setsortval } = useContext(Box);
   const [love, setlove] = useState(false);
@@ -31,10 +32,7 @@ const BRUSHES = () => {
   };
 
   time(list1);
-
-  const handleadd = (id) => {
-    dispatch({ type: "ADD_TO_CART", payload: id });
-  };
+  const navigate= useNavigate();
 
   return (
     <div>
@@ -45,13 +43,13 @@ const BRUSHES = () => {
       <div className={styles.q3}>
         <div className={styles.q4}>
           <div>
-            <div>sgdsfg</div>
-            <br></br>
+          <div style={{display:"flex"}}><img style={{marginTop:"3px"}} src='https://in.sugarcosmetics.com/desc-images/breadcrumb_home.svg' id={styles.e1} alt="no" onClick={()=>navigate("/")}/><p> / Brushes</p></div>
+          <br></br>
             <div>Makeup Brushes - 13 items</div>
           </div>
           <div className={styles.q5}>
-            <div>Filters</div>
-            <div>
+          <div style={{display:"flex"}}><img style={{marginTop:"3px"}} src='https://in.sugarcosmetics.com/desc-images/filterIcon.png' id={styles.e1} alt="no" /><p>Filter</p></div>
+          <div>
               <select onChange={handle}>
                 <option>Sort by</option>
                 <option value="1">Name</option>
