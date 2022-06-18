@@ -3,7 +3,6 @@
 }
 .cartContainer {
   display: flex;
-
   padding: 50px;
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -161,6 +160,8 @@
 .applyPromoInput {
   height: 30px;
   margin-top: 23px;
+  text-align: left;
+  margin-left: 10px;
   border: none;
   border-radius: 5px;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
@@ -222,12 +223,12 @@
 }
 .delhiveryBTN {
   width: 450px;
-  height: 30px;
+  height: 40px;
   background-color: black;
   color: white;
 }
 .continueShop {
-  height: 30px;
+  height: 40px;
   text-decoration: underline;
   font-weight: 100;
   width: 200px;
