@@ -16,7 +16,7 @@ const Offer = () => {
                 <div>
                     <img src={data.img} />
                     <div> 
-                        <p className={styles.couponDetailsSugar} >{data.coupon}</p>
+                        <p className={styles.couponDetailsSugar}>{data.coupon}</p>
                     </div>
                 </div>
             ))} 

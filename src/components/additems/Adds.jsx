@@ -27,7 +27,7 @@ const Adds = () => {
                   <p className={Style.pr}>₹ {el.price}</p>
                   <p className={Style.red}>{el.discount}</p>
                 </div>
-                <button
+                <button className={Style.btns}
                   onClick={() => dispatch({ type: "ADD_TO_CART", payload: el })}
                 >
                   ADD TO CART

@@ -8,7 +8,7 @@ const l1 = [
     price: 699,
     rating: "4.7(428)",
     love: false,
-    trending:true
+    trending: true,
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const l1 = [
     price: 499,
     rating: "4.6(53)",
     love: false,
-    trending:true
+    trending: true,
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ const l1 = [
     price: 799,
     rating: "4.1(945)",
     love: false,
-    trending:true
+    trending: true,
   },
   {
     id: 4,
@@ -43,7 +43,7 @@ const l1 = [
     price: 499,
     rating: "4.6(188)",
     love: false,
-    trending:true
+    trending: true,
   },
   {
     id: 6,
@@ -52,7 +52,7 @@ const l1 = [
     price: 249,
     rating: "4.5(97)",
     love: false,
-    trending:true
+    trending: true,
   },
   {
     id: 7,
@@ -69,7 +69,7 @@ const l1 = [
     price: 799,
     rating: "4.9(143)",
     love: false,
-    trending:true
+    trending: true,
   },
   {
     id: 9,
@@ -78,7 +78,7 @@ const l1 = [
     price: 499,
     rating: "4.6(318)",
     love: false,
-    trending:true
+    trending: true,
   },
   {
     id: 10,
@@ -95,7 +95,7 @@ const l1 = [
     price: 349,
     rating: "4.6(73)",
     love: false,
-    trending:true
+    trending: true,
   },
   {
     id: 12,
@@ -104,7 +104,7 @@ const l1 = [
     price: 999,
     rating: "5(168)",
     love: false,
-    trending:true
+    trending: true,
   },
   {
     id: 13,
@@ -442,7 +442,6 @@ const l3 = [
   },
 ];
 
-
 let addItems = [
   {
     image:
@@ -654,14 +653,13 @@ const slideImages3 = [
   },
 ];
 
-localStorage.setItem("list1",JSON.stringify(l1))
-localStorage.setItem("list2",JSON.stringify(l2))
-localStorage.setItem("list3",JSON.stringify(l3))
+localStorage.setItem("list1", JSON.stringify(l1));
+localStorage.setItem("list2", JSON.stringify(l2));
+localStorage.setItem("list3", JSON.stringify(l3));
 
-let l11=JSON.parse(localStorage.getItem("list1"))
-let l12=JSON.parse(localStorage.getItem("list2"))
-let l13=JSON.parse(localStorage.getItem("list3"))
-
+let l11 = JSON.parse(localStorage.getItem("list1"));
+let l12 = JSON.parse(localStorage.getItem("list2"));
+let l13 = JSON.parse(localStorage.getItem("list3"));
 
 const slideImages4 = [
   {
@@ -901,45 +899,203 @@ let sugarbeauty = [
     image:
       "https://d32baadbbpueqt.cloudfront.net/Homepage/5959a7b1-efdd-4fce-812a-c6a940fcdcd9.jpg",
     id: 1,
-    navigate:"www.google.com"
+    navigate: "www.google.com",
   },
   {
     image:
       "https://d32baadbbpueqt.cloudfront.net/Homepage/b9a64f84-817c-4984-a9e3-a75ec31843e4.jpg",
     id: 2,
-    navigate:"www.myntra.com"
+    navigate: "www.myntra.com",
   },
   {
     image:
       "https://d32baadbbpueqt.cloudfront.net/Homepage/47cd2c21-b320-4473-8fdc-9eb49ddefdda.jpg",
     id: 3,
-    navigate:"www.sugar.com"
+    navigate: "www.sugar.com",
   },
   {
     image:
       "https://d32baadbbpueqt.cloudfront.net/Homepage/47cd2c21-b320-4473-8fdc-9eb49ddefdda.jpg",
     id: 4,
-    navigate:"www.youtube.com"
+    navigate: "www.youtube.com",
   },
   {
     image:
       "https://d32baadbbpueqt.cloudfront.net/Homepage/f41ec860-3e9d-46b1-8c48-8ad7feb8d9e8.jpg",
     id: 5,
-    navigate:"www.facebook.com"
+    navigate: "www.facebook.com",
   },
   {
     image:
       "https://d32baadbbpueqt.cloudfront.net/Homepage/5959a7b1-efdd-4fce-812a-c6a940fcdcd9.jpg",
     id: 6,
-    navigate:"www.twitter.com"
+    navigate: "www.twitter.com",
   },
 ];
+
+let addssss = [
+  {
+    image:
+      "https://cdn.shopify.com/s/files/1/0906/2558/products/1_3cb613fc-43c8-4763-b3e6-5ccf4761c0d5.jpg?v=1641570994",
+    name: "POWER CLAY MASK STICK",
+    price: 699,
+    id: 1,
+  },
+  {
+    image:
+      "https://cdn.shopify.com/s/files/1/0906/2558/products/Instant-Pore-Cleansing-Mask-1_1.jpg?v=1626423690",
+    name: "AQUAHOLIC INSTANT PORE CLEANING MASK",
+    price: 499,
+    id: 2,
+  },
+  {
+    image:
+      "https://cdn.shopify.com/s/files/1/0906/2558/products/CCEyeFirmingCreamWBG-3.jpg?v=1628610287",
+    name: "COFFEE CULTURE EYE FIRMING CREAM",
+    price: 399,
+    id: 3,
+  },
+  {
+    image:
+      "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-cheat-sheet-clarifying-mask-12775754203219.jpg?v=1619113702",
+    name: "CHEAT SHEET CLARIFYING MASK",
+    price: 99,
+    id: 4,
+  },
+  {
+    image:
+      "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-cheat-sheet-clarifying-mask-12775754203219.jpg?v=1619113702",
+    name: "CHEAT SHEET CLARIFYING MASK",
+    price: 99,
+    id: 5,
+  },
+  {
+    image:
+      "https://cdn.shopify.com/s/files/1/0906/2558/products/Hyaluronic-Serum-3_1.jpg?v=1626423730",
+    name: "AQUAHOLIC HYALOURONIC SERUM",
+    price: 499,
+    id: 6,
+  },
+  {
+    image:
+      "https://cdn.shopify.com/s/files/1/0906/2558/products/Coffee-culture-cleansing-balm-stick-01.jpg?v=1643375708",
+    name: "COFFEE CULTURE CLEANINSING BALM STICK",
+    price: 699,
+    id: 7,
+  },
+  {
+    image:
+      "https://cdn.shopify.com/s/files/1/0906/2558/products/sugar-cosmetics-cheat-sheet-clarifying-mask-12775754203219.jpg?v=1619113702",
+    name: "CHEAT SHEET CLARIFYING MASK",
+    price: 99,
+    id: 8,
+  },
+];
+let imggg = [
+  {
+    image:
+      "https://d32baadbbpueqt.cloudfront.net/Homepage/4188e9cd-11e4-452e-bec3-577894e7ec81.jpg",
+    id: 1,
+  },
+  {
+    image:
+      "https://d32baadbbpueqt.cloudfront.net/Homepage/46e14c59-119d-4c5b-8055-819d8bf35e06.jpg",
+    id: 2,
+  },
+  {
+    image:
+      "https://d32baadbbpueqt.cloudfront.net/Homepage/10374315-c48d-47b0-bb86-3374a2dde76b.jpg",
+    id: 3,
+  },
+  {
+    image:
+      "https://d32baadbbpueqt.cloudfront.net/Homepage/eb4002ec-c165-4aaf-90b3-f813484fae25.jpg",
+    id: 4,
+  },
+  {
+    image:
+      "https://d32baadbbpueqt.cloudfront.net/Homepage/f6d29c12-e7cf-476e-a654-b6697e0fa8de.jpg",
+    id: 5,
+  },
+  {
+    image:
+      "https://d32baadbbpueqt.cloudfront.net/Homepage/7b184616-6420-4992-ac33-23feeb482956.jpg",
+    id: 6,
+  },
+  {
+    image:
+      "https://d32baadbbpueqt.cloudfront.net/Homepage/60cfcab0-427f-4748-8c44-5bae2bbfa3a4.jpg",
+    id: 7,
+  },
+  {
+    image:
+      "https://d32baadbbpueqt.cloudfront.net/Homepage/4188e9cd-11e4-452e-bec3-577894e7ec81.jpg",
+    id: 8,
+  },
+];
+
+const slideImages = [
+  {
+    image:
+      "https://d32baadbbpueqt.cloudfront.net/Homepage/85bc9b9b-d8b3-4fa1-a1b0-a77ca9428664.jpg",
+      id:1
+  },
+  {
+    image:
+      "https://d32baadbbpueqt.cloudfront.net/549c6869-246f-4dba-8cde-7a6798f866ec.jpg",
+      id:2
+  },
+  {
+    image:
+      "https://d32baadbbpueqt.cloudfront.net/Homepage/7d151892-4d17-466e-8a06-743392796264.jpg",
+      id:3
+  },
+  {
+    image:
+      "https://d32baadbbpueqt.cloudfront.net/Homepage/309d5880-c650-4773-9cb9-5b8efc593ac0.jpg",
+      id:4
+  },
+  {
+    image:
+      "https://d32baadbbpueqt.cloudfront.net/Homepage/9f159288-063a-4ca4-926a-7fd43c13d370.jpg",
+      id:5
+  },
+  {
+    image:
+      "https://d32baadbbpueqt.cloudfront.net/fc27be93-0882-45d7-aef9-0ad461636eae.jpg",
+      id:6
+  },
+  {
+    image:
+      "https://d32baadbbpueqt.cloudfront.net/Homepage/7d151892-4d17-466e-8a06-743392796264.jpg",
+      id:7
+  },
+];
+//**************************************************************************** */
+
+const slideImages1 = [
+  {
+    image:
+      "https://d32baadbbpueqt.cloudfront.net/Homepage/11b811a4-2faa-4985-98f0-01af9f2df943.jpg",
+      id:1
+  },
+  {
+    image:
+      "https://d32baadbbpueqt.cloudfront.net/Homepage/fb9d5eba-b79a-4e38-b01d-fb6cab221874.jpg",
+      id:2
+  },
+  {
+    image:
+      "https://d32baadbbpueqt.cloudfront.net/Homepage/2cf0052d-e531-4f6e-9b00-e31f3642f0b3.jpg",
+      id:3
+  },
+];
+
 export const Box = createContext();
 export const BoxProvider = ({ children }) => {
-const [list1, setlist1] = useState(l11)
-const [list2, setlist2] = useState(l12)
-const [list3, setlist3] = useState(l13)
-
+  const [list1, setlist1] = useState(l11);
+  const [list2, setlist2] = useState(l12);
+  const [list3, setlist3] = useState(l13);
 
   const [sortval, setsortval] = useState(0);
  
@@ -985,6 +1141,11 @@ const [list3, setlist3] = useState(l13)
         addss,
         addsss,
         sugarbeauty,
+        addssss,
+        imggg,
+        slideImages1,
+        slideImages
+
       }}
     >
       {children}
