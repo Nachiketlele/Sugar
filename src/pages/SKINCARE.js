@@ -82,7 +82,12 @@ if(flag200===true)
          <div>Skin Care Products - 44 items</div>
        </div>
        <div className={styles.q5}>
-       <div style={{display:"flex"}}><img style={{marginTop:"3px"}} src='https://in.sugarcosmetics.com/desc-images/filterIcon.png' id={styles.e1} alt="no" /><p>Filter</p></div>
+       <div style={{marginLeft:"-100px"}}>
+              <select style={{border:"0px"}}>
+                <option>Filter by</option>
+                <option >No filter options</option>
+              </select>
+            </div>
          <div>
            <select onChange={handle}>
              <option>Sort by</option>
