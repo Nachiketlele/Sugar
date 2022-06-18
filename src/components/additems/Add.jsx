@@ -13,6 +13,7 @@ const Add = () => {
   const { properties1 } = useContext(Box1);
   const dispatch = useDispatch();
 
+
   return (
     <div>
       <Slide id={Style.na} {...properties1}>
@@ -24,7 +25,7 @@ const Add = () => {
                 <img src={el.image} />
                 <p className={Style.h1}>{el.name}</p>
                 <p className={Style.pr}>₹ {el.price}</p>
-                <button
+                <button className={Style.btns}
                   onClick={() => dispatch({ type: "ADD_TO_CART", payload: el })}
                 >
                   ADD TO CART

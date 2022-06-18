@@ -25,12 +25,43 @@ const MAKEUP = () => {
     }
     localStorage.setItem("list2", JSON.stringify(list2));
     setlist2(JSON.parse(localStorage.getItem("list2")));
-
-    for (let i = 0; i < list2.length; ++i) {
-      if (list2[i].love == true) favArr.push(list2[i]);
+let flag100=false;
+let flag200;
+for (let i = 0; i < list2.length; ++i)
+{
+  if(list2[i].id===val)
+  {
+    if(list2[i].love===false)
+    flag200=false
+    else
+    flag200=true
+  }
+}
+if(flag200===true)
+   { if(favArr.length===0)
+    {favArr.push(list2[val-13-1]);
+      localStorage.setItem("fav", JSON.stringify(favArr));}
+    else
+    {for (let i1 = 0; i1 < favArr.length; ++i1) {
+      if (favArr[i1].id === val)
+      {
+        flag100=true;
+      }
     }
-    localStorage.setItem("fav", JSON.stringify(favArr));
+    if(flag100===false)
+    {favArr.push(list2[val-13-1]);
+    localStorage.setItem("fav", JSON.stringify(favArr));}
+  }}
+
+  else if(flag200===false){
+    let deleted=favArr.filter(e=>e.id!==val)
+    localStorage.setItem("fav", JSON.stringify(deleted));
+  }
+
+
+
   };
+
 
   time(list2);
   const navigate= useNavigate();

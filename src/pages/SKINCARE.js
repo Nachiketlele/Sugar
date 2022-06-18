@@ -18,18 +18,50 @@ const SKINCARE = () => {
   let r = JSON.parse(localStorage.getItem("list3"));
   let favArr = JSON.parse(localStorage.getItem("fav")) || [];
   const [list3, setlist3] = useState(r);
+
   const thelove = (val) => {
     for (let i = 0; i < list3.length; ++i) {
       if (val === list3[i].id) list3[i].love = !list3[i].love;
     }
     localStorage.setItem("list3", JSON.stringify(list3));
     setlist3(JSON.parse(localStorage.getItem("list3")));
-
-    for (let i = 0; i < list3.length; ++i) {
-      if (list3[i].love === true) favArr.push(list3[i]);
+let flag100=false;
+let flag200;
+for (let i = 0; i < list3.length; ++i)
+{
+  if(list3[i].id===val)
+  {
+    if(list3[i].love===false)
+    flag200=false
+    else
+    flag200=true
+  }
+}
+if(flag200===true)
+   { if(favArr.length===0)
+    {favArr.push(list3[val-34]);
+      localStorage.setItem("fav", JSON.stringify(favArr));}
+    else
+    {for (let i1 = 0; i1 < favArr.length; ++i1) {
+      if (favArr[i1].id === val)
+      {
+        flag100=true;
+      }
     }
-    localStorage.setItem("fav", JSON.stringify(favArr));
+    if(flag100===false)
+    {favArr.push(list3[val-34]);
+    localStorage.setItem("fav", JSON.stringify(favArr));}
+  }}
+
+  else if(flag200===false){
+    let deleted=favArr.filter(e=>e.id!==val)
+    localStorage.setItem("fav", JSON.stringify(deleted));
+  }
+
+
+
   };
+
 
   time(list3);
 
