@@ -5,6 +5,7 @@ import BRUSHES from './pages/BRUSHES';
 import Cart from './pages/Cart';
 import MAKEUP from './pages/MAKEUP';
 import Map from './pages/Map';
+import SingleItem from './pages/SingleItem';
 import SKINCARE from './pages/SKINCARE';
 import TRENDING from './pages/TRENDING';
 import Wishlist from './pages/Wishlist';
@@ -24,6 +25,7 @@ function App() {
         <Route path='/cart' element={<Cart/>}/>
         <Route path='/map' element={<Map/>}/>
         <Route path='/wishlist' element={<Wishlist/>}/>
+        <Route path='/single' element={<SingleItem/>}/>
       </Routes>
     </div>
   );

@@ -12,6 +12,7 @@ const Navbar = () => {
         <Link to='/cart'>Cart</Link>
         <Link to='/map'>Map</Link>
         <Link to='/wishlist'>Wishlist</Link>
+        <Link to='/single'>SingleItem</Link>
     </div>
   )
 }
