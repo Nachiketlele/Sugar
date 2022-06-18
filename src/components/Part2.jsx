@@ -53,8 +53,6 @@ const Part2 = () => {
       </Slide>
       <br />
       <br />
-      
-
 
       <p className={Style.Refer}>SUGAR STREAMING</p>
       <Slide {...fadeProperties2} id={Style.sl}>
@@ -76,10 +74,8 @@ const Part2 = () => {
       </Slide>
       <br/>
       <br/>
-
-
       <div>
-      <Adds />
+        <Adds />
       </div>
       <br />
       <br />
@@ -97,7 +93,7 @@ const Part2 = () => {
       </Slide>
       <br />
       <br />
-      <Addss/>
+      <Addss />
       <br />
       <br />
       <p className={Style.Refer}>SUGAR BEAUTY BLOG</p>

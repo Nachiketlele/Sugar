@@ -9,13 +9,15 @@ import { BoxProvider } from "./context/context";
 import { Provider } from "react-redux";
 import { store } from "./Store/store";
 import { Box1Provider } from "./context/prop.context";
+import { OfferProvider } from "./context/OfferContext";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Provider store={store}>
-      {/* <ChakraProvider>  */}
     <BrowserRouter>
-     
+
+      <Provider store={store}>
+        <OfferProvider>
+
         <BoxProvider>
           <Box1Provider>
             
@@ -23,10 +25,16 @@ root.render(
            
           </Box1Provider>
         </BoxProvider>
+
       
-    </BrowserRouter> 
-    {/* </ChakraProvider> */}
+    
+   </OfferProvider>
     </Provider>
+</BrowserRouter> 
+        
+
+
+
   </React.StrictMode>
 );
 

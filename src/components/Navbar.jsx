@@ -164,7 +164,7 @@ const Navbar = () => {
       <Link className="grow" to="/Grow">
         STORES
       </Link>
-    </div>
+      </div>
   );
 };
 

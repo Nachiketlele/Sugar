@@ -118,3 +118,60 @@ img {
   display: flex;
   align-items: center;
 }
+.a1,.a2{display:flex;
+  gap:20px;
+  background-color:#f6e1e9;
+}
+  .a1 input{
+    width:300px;
+    border-radius: 5px;
+    border: none;
+    height:35px
+  }
+  .a2 input{
+    width:500px;
+    border-radius: 5px;
+    border: none;
+    height:35px
+  }
+ .a3{display:flex;width:800px;
+  justify-content:space-between;
+  margin:auto;
+  margin-top:20px;
+  background-color:#f6e1e9;
+}
+  .a3 button{
+    width:380px;
+    height:40px;
+    border-radius: 5px;
+    border: none;
+  }
+  #v1{
+    display: flex;
+    width:500px;
+    justify-content: space-between;
+    margin-left: 30px;
+  }
+  #v1 img{
+    height: 120px;
+    width: 240px;
+    cursor: pointer;
+  }
+  .q15 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    width: 95%;
+    margin: auto;
+    margin-top: 50px;
+  }
+  .q22,.q22 p{
+    background-color: white;
+  }
+  .q22:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: white;
+  }
+  .q23:hover{
+    cursor: pointer;
+  }

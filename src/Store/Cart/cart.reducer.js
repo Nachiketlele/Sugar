@@ -1,36 +1,24 @@
-// let cartData = localStorage.getItem("cartItem") || [];
-let q1=JSON.parse(localStorage.getItem("list1"))
-let q2=JSON.parse(localStorage.getItem("list2"))
-let q3=JSON.parse(localStorage.getItem("list3"))
-let bigarr=[...q1,...q2,...q3];
+let cartData = JSON.parse(localStorage.getItem("cartItem")) || [];
 
-let cart1=JSON.parse(localStorage.getItem("cartItem"))||[]
-export const cartReducer = (cart = cart1, action) => {
+export const cartReducer = (cart = cartData, action) => {
+  console.log(action.payload);
   switch (action.type) {
     case "ADD_TO_CART": {
-let flag=false;
-for(let j=0;j<cart.length;++j)
- { if(cart[j].id===action.payload)
-  {cart[j].qty+=1;
-    flag=true;
-  }
-}
-  
-    for(let i=0;i<bigarr.length;++i)
-  {if(!flag)
-    {if(bigarr[i].id===action.payload)
-      {bigarr[i].qty=1;
-    cart.push(bigarr[i])}}
-  }
-      localStorage.setItem("cartItem",JSON.stringify(cart));
-      return
-}
-    case "REMOVE": {
-      let newcart= cart.filter((item) => item.id !== action.payload);
-      console.log(newcart)
+      if (cartData === []) {
+        return;
+      } else localStorage.setItem("cartItem", JSON.stringify(cart));
 
-      localStorage.setItem("cartItem",JSON.stringify(newcart));
-      return newcart;
+      let tempCart = cart.filter((item) => item.id === action.payload.id);
+      if (tempCart < 1) {
+        return [...cart, action.payload];
+      } else {
+        return cart;
+      }
+    }
+    case "REMOVE": {
+      let remove_cart = cart.filter((item) => item.id !== action.payload.id);
+      localStorage.setItem("cartItem", JSON.stringify(remove_cart));
+      return remove_cart;
     }
     case "INCREASE": {
       let tempCart = cart.map((item) => {
@@ -50,6 +38,7 @@ for(let j=0;j<cart.length;++j)
       });
       return tempCart;
     }
-    default:  return cart;
+    default:
+      return cart;
   }
 };
