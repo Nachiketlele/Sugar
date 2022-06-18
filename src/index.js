@@ -9,16 +9,19 @@ import { BoxProvider } from "./context/context";
 import { Provider } from "react-redux";
 import {store} from './Store/store'
 import { Box1Provider } from "./context/prop.context";
+import { OfferProvider } from "./context/OfferContext";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Provider store={store}>
+        <OfferProvider>
         <BoxProvider>
           <Box1Provider>
           <App />
           </Box1Provider>
         </BoxProvider>
+        </OfferProvider>
       </Provider>
     </BrowserRouter>
   </React.StrictMode>

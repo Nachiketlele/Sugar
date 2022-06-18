@@ -7,6 +7,7 @@ import MAKEUP from './pages/MAKEUP';
 import Map from './pages/Map';
 import SKINCARE from './pages/SKINCARE';
 import TRENDING from './pages/TRENDING';
+import Offer from "./pages/Offer"
 
 
 
@@ -20,6 +21,7 @@ function App() {
         <Route path='/brushes' element={<BRUSHES/>}>BRUSHES</Route>
         <Route path='/skincare' element={<SKINCARE/>}>SKINCARE</Route>
         <Route path='/trending' element={<TRENDING/>}>TRENDING</Route>
+        <Route path='/offers' element={<Offer/>}>Offer</Route>
         <Route path='/cart' element={<Cart/>}/>
         <Route path='/map' element={<Map/>}/>
       </Routes>
