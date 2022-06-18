@@ -146,3 +146,29 @@ img {
     border-radius: 5px;
     border: none;
   }
+  #v1{
+    display: flex;
+    width:500px;
+    justify-content: space-between;
+    margin-left: 30px;
+  }
+  #v1 img{
+    height: 120px;
+    width: 240px;
+    cursor: pointer;
+  }
+  .q15 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+    width: 95%;
+    margin: auto;
+    margin-top: 50px;
+  }
+  .q22,.q22 p{
+    background-color: white;
+  }
+  .q22:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: white;
+  }

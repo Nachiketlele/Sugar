@@ -65,7 +65,7 @@ const BRUSHES = () => {
             e.quantity = 1;
             return (
               <div className={styles.q6} key={e.id}>
-                <div className={styles.q2}>
+                <div className={styles.q2} >
                   {" "}
                   <img src={e.src} alt="no" />{" "}
                   <p className={styles.name}>{e.name}</p>{" "}

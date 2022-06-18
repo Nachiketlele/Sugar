@@ -12,6 +12,8 @@ const Navbar = () => {
         <Link to="/offers">OFFERS</Link>
         <Link to='/cart'>Cart</Link>
         <Link to='/map'>Map</Link>
+        <Link to='/wishlist'>Wishlist</Link>
+        <Link to='/single'>SingleItem</Link>
     </div>
   )
 }
