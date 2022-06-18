@@ -1,26 +1,32 @@
-
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import { ChakraProvider } from "@chakra-ui/react";
 import { BrowserRouter } from "react-router-dom";
 import { BoxProvider } from "./context/context";
 import { Provider } from "react-redux";
-import {store} from './Store/store'
+import { store } from "./Store/store";
 import { Box1Provider } from "./context/prop.context";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
+    <Provider store={store}>
+      {/* <ChakraProvider>  */}
     <BrowserRouter>
-      <Provider store={store}>
+     
         <BoxProvider>
           <Box1Provider>
-          <App />
+            
+              <App />
+           
           </Box1Provider>
         </BoxProvider>
-      </Provider>
-    </BrowserRouter>
+      
+    </BrowserRouter> 
+    {/* </ChakraProvider> */}
+    </Provider>
   </React.StrictMode>
 );
 

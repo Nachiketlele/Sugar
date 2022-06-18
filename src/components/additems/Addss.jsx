@@ -26,7 +26,7 @@ const Addss = () => {
                    <p className={Style.pr}>₹ {el.price}</p>
                    <p className={Style.red}>{el.discount}</p>
                    </div>
-                   <button>ADD TO CART</button>
+                   <button className={Style.btns}>ADD TO CART</button>
                 </div>
             </div>
         ))}
@@ -53,7 +53,7 @@ const Addss = () => {
                    <p className={Style.pr}>₹ {el.price}</p>
                    <p className={Style.red}>{el.discount}</p>
                    </div>
-                   <button>ADD TO CART</button>
+                   <button className={Style.btns}>ADD TO CART</button>
                 </div>
             </div>
         ))}
