@@ -20,10 +20,8 @@ const SKINCARE = () => {
   const [list3, setlist3] = useState(r);
 
   const thelove = (val) => {
-      console.log(val)
-      for (let i = 0; i < list3.length; ++i) {
-      if (val === list3[i].id) 
-      list3[i].love = !list3[i].love;
+    for (let i = 0; i < list3.length; ++i) {
+      if (val === list3[i].id) list3[i].love = !list3[i].love;
     }
     localStorage.setItem("list3", JSON.stringify(list3));
     setlist3(JSON.parse(localStorage.getItem("list3")));
@@ -63,6 +61,7 @@ if(flag200===true)
 
 
   };
+
 
   time(list3);
 
