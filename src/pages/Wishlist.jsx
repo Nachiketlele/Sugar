@@ -47,7 +47,7 @@ const Wishlist = () => {
   }
 
 useEffect(() => {
-  setfavlist(JSON.parse(localStorage.getItem("fav")));
+  setfavlist(JSON.parse(localStorage.getItem("fav"))||[]);
 }, [])
 
     
@@ -67,7 +67,7 @@ useEffect(() => {
             return (
               <div className={styles.q6} key={e.id}>
                 <div className={styles.q22}>
-                <img src='https://biohack.ae/wp-content/uploads/2019/01/white-close-button-png-16.png' alt="no" style={{height:"20px", width:"20px",marginTop:"-10px",marginLeft:"300px"}} onClick={()=>{handledelete(e.id)}}/>
+                <img className={styles.q23} src='https://biohack.ae/wp-content/uploads/2019/01/white-close-button-png-16.png' alt="no" style={{height:"20px", width:"20px",marginTop:"-10px",marginLeft:"300px"}} onClick={()=>{handledelete(e.id)}}/>
                   {" "}
                   <img src={e.src} alt="no" />{" "}
                   <p className={styles.name}>{e.name}</p>{" "}

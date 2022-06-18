@@ -159,7 +159,7 @@ img {
   }
   .q15 {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     width: 95%;
     margin: auto;
@@ -171,4 +171,7 @@ img {
   .q22:hover {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     background-color: white;
+  }
+  .q23:hover{
+cursor: pointer;
   }
