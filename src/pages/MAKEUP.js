@@ -110,7 +110,7 @@ if(flag200===true)
         <div>
         <div style={{display:"flex"}}><img onClick={()=>navigate("/")} style={{marginTop:"3px"}} src='https://in.sugarcosmetics.com/desc-images/breadcrumb_home.svg' id={styles.e1} alt="no"/><p> / Makeup</p></div>
           <br></br>
-          <div>Makeup - 56 items</div>
+          <div>Makeup - 16 items</div>
         </div>
         <div className={styles.q5}>
         <div style={{marginLeft:"-100px"}}>

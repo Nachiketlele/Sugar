@@ -36,4 +36,9 @@
     text-align: right;
     margin-top: -4px;
 }
-
+.couponDetailsSugar:hover{
+    cursor: pointer;
+}
+.image{
+    height:350px;
+}
