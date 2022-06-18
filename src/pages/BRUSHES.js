@@ -24,11 +24,21 @@ const BRUSHES = () => {
     }
     localStorage.setItem("list1", JSON.stringify(list1));
     setlist1(JSON.parse(localStorage.getItem("list1")));
-
-    for (let i = 0; i < list1.length; ++i) {
-      if (list1[i].love == true) favArr.push(list1[i]);
+let flag100=false;
+    if(favArr.length===0)
+    {favArr.push(list1[val-1]);
+      localStorage.setItem("fav", JSON.stringify(favArr));}
+    else
+    {for (let i1 = 0; i1 < favArr.length; ++i1) {
+      if (favArr[i1].id === val)
+      {
+        flag100=true;
+      }
     }
-    localStorage.setItem("fav", JSON.stringify(favArr));
+    if(flag100===false)
+    {favArr.push(list1[val-1]);
+    localStorage.setItem("fav", JSON.stringify(favArr));}
+  }
   };
 
   time(list1);

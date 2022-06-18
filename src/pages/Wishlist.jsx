@@ -7,14 +7,27 @@ import pic2 from './pic2.jpg'
 import pic3 from './pic3.jpg'
 import pic4 from './pic4.jpg'
 import img1 from "./star_filled.png";
+import { useEffect } from 'react';
+import { useState } from 'react';
 // import { useDispatch } from 'react-redux';
 
 const Wishlist = () => {
     const navigate= useNavigate();
-   let per= JSON.parse(localStorage.getItem("person"));
-   let favlist= JSON.parse(localStorage.getItem("fav"))||[];
+    const [favlist, setfavlist] = useState([])
+   let per= JSON.parse(localStorage.getItem("person"))||"";
+  
     // const dispatch=useDispatch()
+  const handledelete=(val)=>{
+    let p=JSON.parse(localStorage.getItem("fav"))
+    let newp=p.filter(e=>e.id!==val)
+    localStorage.setItem("fav",JSON.stringify(newp))
+    setfavlist(JSON.parse(localStorage.getItem("fav")));
+  }
+useEffect(() => {
+  setfavlist(JSON.parse(localStorage.getItem("fav")));
+}, [])
 
+    
   return (
     <div>
         <div style={{display:"flex",marginLeft:"30px"}}><img style={{marginTop:"3px"}} src='https://in.sugarcosmetics.com/desc-images/breadcrumb_home.svg' id={styles.e1} alt="no" onClick={()=>navigate("/")}/><p> / Account / Wishlist</p></div>
@@ -31,11 +44,12 @@ const Wishlist = () => {
             return (
               <div className={styles.q6} key={e.id}>
                 <div className={styles.q22}>
+                <img src='https://biohack.ae/wp-content/uploads/2019/01/white-close-button-png-16.png' alt="no" style={{height:"20px", width:"20px",marginTop:"-10px",marginLeft:"300px"}} onClick={()=>{handledelete(e.id)}}/>
                   {" "}
                   <img src={e.src} alt="no" />{" "}
                   <p className={styles.name}>{e.name}</p>{" "}
                   <p className={styles.price}>₹ {e.price}</p>{" "}
-                  <div className={styles.q8}>
+                  <div className={styles.q8} style={{margin:"auto"}}>
                     {" "}
                     <img src={img1} alt="no" id={styles.e1} />{" "}
                     <p className={styles.rating}>{e.rating}</p>{" "}
@@ -48,8 +62,9 @@ const Wishlist = () => {
                   >
                     SHOP NOW{" "}
                   </div>
+                  
                 </div>
-              </div>
+               </div>
             );
           })}
         </div>
