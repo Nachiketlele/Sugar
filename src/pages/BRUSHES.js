@@ -15,7 +15,39 @@ const BRUSHES = () => {
     setsortval(e.target.value);
   };
 
+
+
+
   let r = JSON.parse(localStorage.getItem("list1"));
+
+  let qwer = JSON.parse(localStorage.getItem("list1"));
+ 
+
+
+  const handle1 = (e) => {
+    let r=e.target.value;
+    if(r==='1')
+    {let qwer = JSON.parse(localStorage.getItem("list1"));
+      setlist1(qwer.filter(e=>e.name.includes("Eye")))
+    }
+    else if(r==='2')
+    { let qwer = JSON.parse(localStorage.getItem("list1"));
+      setlist1(qwer.filter(e=>e.name.includes("Face")))
+    }
+    else if(r==='3')
+    {
+      let qwer = JSON.parse(localStorage.getItem("list1"));
+      setlist1(qwer.filter(e=>e.name.includes("Foundation")))
+    }
+    else
+    {
+      let qwer = JSON.parse(localStorage.getItem("list1"));
+      setlist1(qwer)
+    }
+  };
+
+
+
   let favArr = JSON.parse(localStorage.getItem("fav")) || [];
   const [list1, setlist1] = useState(r);
 
@@ -63,6 +95,7 @@ if(flag200===true)
   };
 
   time(list1);
+
   const navigate= useNavigate();
 
   return (
@@ -79,9 +112,17 @@ if(flag200===true)
             <div>Makeup Brushes - 13 items</div>
           </div>
           <div className={styles.q5}>
-          <div style={{display:"flex"}}><img style={{marginTop:"3px"}} src='https://in.sugarcosmetics.com/desc-images/filterIcon.png' id={styles.e1} alt="no" /><p>Filter</p></div>
+          <div style={{marginLeft:"-100px"}}>
+              <select style={{border:"0px"}} onChange={handle1}>
+                <option>Filter by</option>
+                <option value="1">Eyeshadow Brush</option>
+                <option value="2">Face Brush</option>
+                <option value="3">Foundation Brush</option>
+                <option value="4">Remove filters</option>
+              </select>
+            </div>
           <div>
-              <select onChange={handle}>
+              <select style={{border:"0px"}} onChange={handle}>
                 <option>Sort by</option>
                 <option value="1">Name</option>
                 <option value="2">Price - High to Low</option>
