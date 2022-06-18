@@ -15,14 +15,37 @@ const Wishlist = () => {
     const navigate= useNavigate();
     const [favlist, setfavlist] = useState([])
    let per= JSON.parse(localStorage.getItem("person"))||"";
-  
+  let starlist,g;
     // const dispatch=useDispatch()
   const handledelete=(val)=>{
     let p=JSON.parse(localStorage.getItem("fav"))
     let newp=p.filter(e=>e.id!==val)
     localStorage.setItem("fav",JSON.stringify(newp))
     setfavlist(JSON.parse(localStorage.getItem("fav")));
+
+    if(val<=13)
+    {starlist=JSON.parse(localStorage.getItem("list1"))
+    g=1;}
+    else if(val>13&&val<=33)
+    {starlist=JSON.parse(localStorage.getItem("list2"))
+    g=2;}
+    else if(val>33&&val<=53)
+    {starlist=JSON.parse(localStorage.getItem("list3"))
+    g=3;}
+
+    for(let i=0;i<starlist.length;++i)
+    {
+      if(starlist[i].id===val)
+      starlist[i].love=!starlist[i].love
+    }
+    if(g===1)
+    localStorage.setItem("list1",JSON.stringify(starlist))
+    else if(g===2)
+    localStorage.setItem("list2",JSON.stringify(starlist))
+    else if(g===3)
+    localStorage.setItem("list3",JSON.stringify(starlist))
   }
+
 useEffect(() => {
   setfavlist(JSON.parse(localStorage.getItem("fav")));
 }, [])

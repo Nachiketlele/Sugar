@@ -19,13 +19,14 @@ const Map = () => {
     const state=useRef("")
     const city=useRef("")
     const country=useRef('')
-   let obj={name:name.current.value,company:company.current.value,phone:phone.current.value,flat:flat.current.value,email:email.current.value,apartment:apartment.current.value,pin:pin.current.value,state:state.current.value,city:city.current.value,country:country.current.value}
+   let obj={name:"User",company:"",phone:"",flat:"",email:"",apartment:"",pin:"",state:"",city:"",country:""}
+   
    const handle=()=>{
-    localStorage.setItem("person",JSON.stringify(per))
+    obj={name:name.current.value,company:company.current.value,phone:phone.current.value,flat:flat.current.value,email:email.current.value,apartment:apartment.current.value,pin:pin.current.value,state:state.current.value,city:city.current.value,country:country.current.value}
+    // setper(obj)
+    localStorage.setItem("person",JSON.stringify(obj))
    }
-   useEffect(() => {
-     setper(obj)
-   }, [obj])
+   
    
   return (
     <div>
