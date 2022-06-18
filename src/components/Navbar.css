@@ -1,12 +1,15 @@
 .main_menu {
     position: relative;
-    display: inline-block;
+    /* display: inline-block; */
+    border: 1px solid black;
+    /* margin-left: 20px; */
   }
   .menu-btn{
     text-decoration: none;
     color: grey;
     font-size: 14px;
     font-weight: bold;
+    /* border: 1px solid red; */
   }
   .xyz {
     display: none;
@@ -43,7 +46,7 @@
     transition: 0.1s;
   }
   .upperBox{
-    width: 100%;
+    width: 40%;
     display: flex;
     gap: 30px;
     color: black;

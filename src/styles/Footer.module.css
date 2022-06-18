@@ -1,43 +1,86 @@
 .sugarFooterMainDiv{
     width: 100%;
     height: 650px;
-    background-color: #000000;
-    box-sizing: border-box;
+    background-color: black;
     font-family: 'Poppins', sans-serif;
     margin-top: 25px;
+    /* border: 1px solid red; */
 }
 .sugarLogoFooterHead{
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     text-align: center;
+    border: 1px solid black;
+    background-color: black;
 }
 .sugarLogoImageSet{
+    margin-top: 0px;
     width: 120px;
     height: 120px;
+    background-color: black;
+    
+}
+.h4{
+    /* color: whi; */
+    font-weight: bold;
+    background-color: black;
+    width: max-content;
 }
 .iconsSocialMediaDiv{
     display: flex;
-    padding-left: 42%;
-    margin-bottom: 15px;
+    align-items: center;
+    width: 100%;
+   
+    justify-content: center;
+    /* margin-bottom: 15px; */
+    background-color: black;
+    /* border: 1px solid teal; */
+}
+.as{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    margin-left: 20px;
+    margin-top: -10px;
+    background-color: black;
 }
 .sugarSocialMediaIconsSet{
+     /* background-color: black; */
+    /* margin-right: 20px; */
+    width: 100%;
+    /* height: max-content; */
+    /* border: 1px solid red; */
+    cursor: pointer;
+    background-color: black;
+    text-decoration: none;
+}
+.im{
     width: 20px;
     height: 20px;
-    margin-right: 20px;
-    cursor: pointer;
+    background-color: black;
 }
 .sugarNewsLetterAndSugarApp{
     display: flex;
+    /* border: 1px solid red; */
     width: 80%;
     margin: auto;
-    margin-bottom: -7px;
+    justify-content: space-between;
+    /* margin-bottom: -7px; */
+    margin-top: 40px;
+    background-color: black;
 }
 .sugarNewsLetter{
     color: white;
-    width: 40%;
+    width: max-content;
     letter-spacing: 1px;
+    background-color: black;
+}
+.in{
+    /* border: 1px solid red; */
+    margin-top: 40px;
 }
 .newsLetterInput{
-    height: 35px;
+    height: 40px;
     width: 250px;
     font-size: 17px;
     border: none;
@@ -51,31 +94,60 @@
     color: white;
     background-color: #fc2779;
     font-size: 16px;
-    border-radius: 5px;
+    /* border-radius: 0px; */
     cursor: pointer;
+    border: none;
 }
 .sugarAppNew{
-    padding-left: 8%;
+    /* padding-left: 8%; */
+    width: 40%;
     color: white;
+    background-color: black;
+    /* border: 1px solid teal; */
 }
 .sugarAppNewInnerDiv{
     display: flex;
+    background-color: black;
+  
+}
+.p{
+    /* border: 1px solid red; */
+    margin-top: 25px;
+    width: 50%;
+    background-color: black;
+}
+.play{
+    display: flex;
+    gap: 20px;
+    /* border: 1px solid red; */
+    background-color: black;
 }
 .sugarAppPlayStoreAppleStore{
     height: 30px;
-    margin-left: 10px;
+    margin-left: -15px;
+    width: 100px;
+    text-decoration: none;
+    background-color: black;
+  
 }
 .sugarInformation{
     color: white;
     width: 80%;
     margin: auto;
-    margin-top: -7px;
+    margin-top: 30px;
+    /* border: 1px solid red; */
+    background-color: black;
+}
+.ps{
+    background-color: black;
 }
 .sugarInformationInnerInfo{
     display: flex;
-    gap: 80px;
-    margin-top: -9px;
-    line-height: 12px;
+    gap: 120px;
+    margin-top: 20px;
+    background-color: black;
+    /* line-height: 12px; */
+    /* border: 1px solid red; */
 }
 .sugarInformationInnerInfo>a>p:hover{
     color: white;
@@ -85,14 +157,24 @@
     color: white;
     width: 90%;
     margin: auto;
-    margin-top: -2px;
+    margin-top: 30px;
     margin-left: 10%;
+    background-color: black;
+}
+.pss{
+   font-size: 15px;
+   font-weight: 900;
+   background-color: black;
 }
 .sugarGetInTouchInnerInfo{
     display: flex;
     gap: 60px;
-    margin-top: -12px;
+    /* margin-top: -12px; */
     line-height: 12px;
+    color: white;
+    margin-top: 20px;
+    background-color: black;
+    /* border: 1px solid red; */
 
 }
 .sugarInformationInnerInfo>p{
@@ -103,11 +185,15 @@
     width: 90%;
     margin: auto;
     margin-top: 20px;
+    border: 1px solid white;
+}
+.div{
+    background-color: black;
 }
 .sugarConnectInfo{
     color: grey;
     line-height: 1px;
-    text-decoration: none;
+    background-color: black;
 }
 .sugarConnectInfo:hover{
     color: white;
