@@ -550,7 +550,7 @@ const adds = [
   },
   {
     image:
-      "https://cdn.shopify.com/s/files/1/0906/2558/products/1_d9962984-085d-407e-82b6-3fcc257d313f.jpg?v=1649865685",
+      "https://cdn.shopify.com/s/files/1/0906/2558/products/2_bb525208-246a-4f40-b57f-d88372708398.jpg?v=1655308814",
     name: "GLAM EYE MAKEUP VALUE SET",
     price: 1249,
     offer: 1546,
