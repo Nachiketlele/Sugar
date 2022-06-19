@@ -12,6 +12,7 @@
     background-color: #f8f9fa;
     margin-left: 30px;
     padding-bottom: 13px;
+    cursor: pointer;
 }
 .navbarSugarInputSearchContainer{
     margin: auto;
@@ -56,11 +57,21 @@
     margin: auto;
     padding-top: 30px;
     padding-bottom: 25px;
+    background-color:#f8f9fa ;
 }
 .setDiscountLogo{
     width: 20px;
     height: 20px;
     background-color: #f8f9fa;
     margin-top: -3px;
+    cursor: pointer;
+}
+#loginRegisterBtn{
+    border: none;
+    width: 150px;
+    background-color: #f8f9fa;
+    color:black;
+    text-align: left;
+    text-decoration: underline;
 }
 
