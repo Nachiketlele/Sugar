@@ -1,12 +1,16 @@
 .main_menu {
     position: relative;
-    display: inline-block;
+    /* display: inline-block; */
+    /* border: 1px solid black; */
+    margin-left: 20px;
+    width: max-content;
   }
   .menu-btn{
     text-decoration: none;
     color: grey;
     font-size: 14px;
     font-weight: bold;
+    /* border: 1px solid red; */
   }
   .xyz {
     display: none;
@@ -42,12 +46,15 @@
     /* border-bottom: 2px solid rgb(78, 78, 78); */
     transition: 0.1s;
   }
+  .block{
+    display: inline;
+  }
   .upperBox{
-    width: 100%;
+    width: 40%;
     display: flex;
     gap: 30px;
     color: black;
-    border: 1px solid red;
+    /* border: 1px solid red; */
   }
   .p{
     text-decoration: none;

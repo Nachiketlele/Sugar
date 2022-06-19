@@ -8,8 +8,8 @@ const Navbar = () => {
   let cat = [
     {
       id: 1,
-      title: "HOME",
-      path: "/",
+      title: "MAKEUP",
+      path: "/makeup",
       sub: {
         a: "LIPS",
         p1: "/",
@@ -27,7 +27,7 @@ const Navbar = () => {
     {
       id: 2,
       title: "BRUSHES",
-      path: "/makeup",
+      path: "/brushes",
       sub: {
         a: "FACE BRUSHES",
         p1: "/",
@@ -132,6 +132,10 @@ const Navbar = () => {
   };
   // console.log(otp);
   return (
+
+
+  <div className='block'>
+
     <div>
       <div>
         {/* upper section navbar */}
@@ -420,7 +424,9 @@ const Navbar = () => {
         </Link>
       </div>
     </div>
+    </div>
   );
+  
 };
 
 export default Navbar;
