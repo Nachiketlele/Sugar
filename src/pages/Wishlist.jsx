@@ -14,8 +14,7 @@ import { useState } from 'react';
 const Wishlist = () => {
     const navigate= useNavigate();
     const [favlist, setfavlist] = useState([])
-    let v=JSON.parse(localStorage.getItem("person"))
-   let per= JSON.parse(localStorage.getItem("firstname"))||v.name;
+   let per= localStorage.getItem("person")
   let starlist,g;
     // const dispatch=useDispatch()
   const handledelete=(val)=>{
@@ -48,14 +47,14 @@ const Wishlist = () => {
   }
 
 useEffect(() => {
-  setfavlist(JSON.parse(localStorage.getItem("fav"))||[]);
+  setfavlist(JSON.parse(localStorage.getItem("fav")));
 }, [])
 
     
   return (
     <div>
-        <div style={{display:"flex",marginLeft:"30px"}}><img style={{marginTop:"3px"}} src='https://in.sugarcosmetics.com/desc-images/breadcrumb_home.svg' id={styles.e1} alt="no" onClick={()=>navigate("/")}/><p> / Account / Wishlist</p></div>
-        <div style={{display:"flex",marginLeft:"30px"}}><img style={{marginTop:"3px"}} src={person} id={styles.e1} alt="no" onClick={()=>navigate("/")}/><p style={{fontWeight:"bold"}}> Hi, {per} !</p></div>
+        <div style={{display:"flex",marginLeft:"30px",marginTop:"30px"}}><img style={{marginTop:"3px"}} src='https://in.sugarcosmetics.com/desc-images/breadcrumb_home.svg' id={styles.e1} alt="no" onClick={()=>navigate("/")}/><p> / Account / Wishlist</p></div>
+        <div style={{display:"flex",marginLeft:"30px"}}><img style={{marginTop:"3px"}} src={person} id={styles.e1} alt="no" onClick={()=>navigate("/")}/><p style={{fontWeight:"bold"}}> Hi, {per.name} !</p></div>
         <div id={styles.v1}>
             <img src={pic1} alt="no" onClick={()=>navigate("/orders")}/>
             <img src={pic2} alt="no" onClick={()=>navigate("/personalinfo")}/>

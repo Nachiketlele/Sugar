@@ -1098,6 +1098,11 @@ export const BoxProvider = ({ children }) => {
   const [list3, setlist3] = useState(l13);
  const bigarr=[...l1,...l2,...l3]
  localStorage.setItem("bigarr",JSON.stringify(bigarr))
+ localStorage.setItem("person",JSON.stringify({name:"",phone:"",email:"",flat:"",apartment:"",city:"",state:""}))
+
+ let yu=[];
+ localStorage.setItem("fav",JSON.stringify(yu))
+
   const [sortval, setsortval] = useState(0);
  
   const time = (l) => {

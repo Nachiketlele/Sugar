@@ -80,7 +80,7 @@ const getcoupon=()=>{
   }
   return (
     <div>
-      <div style={{ display: "flex", padding: "50px 0px 0px 60px" }}>
+      <div style={{ display: "flex", padding: "30px 0px 0px 60px" }}>
         <img
           style={{ marginTop: "3px" }}
           src="https://in.sugarcosmetics.com/desc-images/breadcrumb_home.svg"
