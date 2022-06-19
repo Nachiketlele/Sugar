@@ -7,10 +7,18 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 function Payment() {
-  let total = localStorage.getItem("total");
-  let tax = localStorage.getItem("tax");
-  const dispatch = useDispatch();
   const cart = useSelector((state) => state);
+  // let total = localStorage.getItem("total");
+  // let tax = localStorage.getItem("tax");
+  const addition = (acc, curr) => {
+    return acc + curr.price * curr.quantity;
+  };
+  const total = cart.reduce(addition, 0);
+  const tax = (total * (18 / 100)).toFixed(2);
+  const dispatch = useDispatch();
+  let promo = localStorage.getItem("discount");
+  const discount = (total * (Number(promo) / 100)).toFixed(2);
+  
   const [state1, setState1] = useState();
   console.log(state1);
   return (
@@ -52,7 +60,7 @@ function Payment() {
                 alt=""
               />
               <p>Discount Applied:</p>
-              <p className={styles2.box2_Inner_p}>₹ {0}.00</p>
+              <p className={styles2.box2_Inner_p}>₹ {discount}</p>
             </div>
             <div className={styles2.box2_Inner}>
               <img
@@ -61,7 +69,7 @@ function Payment() {
                 alt=""
               />
               <p>Amount Payable:</p>
-              <p className={styles2.box2_Inner_p}>₹ {total}.00</p>
+              <p className={styles2.box2_Inner_p}>₹ {total - discount}.00</p>
             </div>
             <p className={styles2.tax}>
               <i>Including ₹ {tax} in taxes</i>

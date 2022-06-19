@@ -6,6 +6,7 @@ import { useDispatch } from 'react-redux';
 import img2 from './imq1.gif'
 import img3 from "./filterIcon.png"
 import { useNavigate } from 'react-router-dom';
+import Footer from "../components/Footer";
 
 const MAKEUP = () => {
   const { time, setsortval } = useContext(Box);
@@ -167,6 +168,7 @@ if(flag200===true)
         })}
       </div>
     </div>
+     <Footer/>
     </div>
   );
 };

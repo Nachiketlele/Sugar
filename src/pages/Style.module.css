@@ -54,6 +54,7 @@ img {
   cursor: pointer;
   padding-top: 8px;
   visibility: hidden;
+  text-align: center;
 }
 .q7:hover {
   background-color: #fc2779;

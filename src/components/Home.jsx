@@ -1,5 +1,6 @@
 import React from "react";
 import Part1 from "./Part1";
+
 import Slideshow from "./Slideshow";
 import Footer from "./Footer"
 

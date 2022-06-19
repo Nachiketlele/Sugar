@@ -5,24 +5,35 @@ import styles from "./cartStyles.module.css";
 import { GrCart } from "react-icons/gr";
 import { useNavigate } from "react-router-dom";
 import styles1 from "./Style.module.css";
+import { useState } from "react";
 function Cart() {
   const cart = useSelector((state) => state);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const [giftState, setGiftState] = useState("");
+  const [promo, setPromo] = useState(0);
+
   const handleNavigate = () => {
     navigate("/");
   };
   const handleDelhivery = () => {
     navigate("/guestCheckout");
   };
-  // console.log(cart.length);
   const addition = (acc, curr) => {
     return acc + curr.price * curr.quantity;
   };
   const total = cart.reduce(addition, 0);
   localStorage.setItem("total", total);
   const tax = (total * (18 / 100)).toFixed(2);
-  localStorage.setItem("tax", tax);
+  const discount = (total * (Number(promo) / 100)).toFixed(2);
+  // console.log(giftState);
+  localStorage.setItem("discount", promo);
+  const handleGiftCard = () => {
+    if (giftState === "SUGAR15") {
+      setPromo(15);
+    }
+  };
+  console.log(promo);
   if (cart.length === 0) {
     return (
       <div>
@@ -161,12 +172,16 @@ function Cart() {
                 </p>
               </div>
               <div className={styles.offerPrice_div}>
-                <select className={styles.selectPromo}>
-                  <option value="option1">
+                <select
+                  className={styles.selectPromo}
+                  onChange={(e) => setPromo(e.target.value)}
+                >
+                  <option value="0">
                     Available Offers/Promos for you! (Click to Expand)
                   </option>
-                  <option value="option2">Option 2</option>
-                  <option value="option3">Option 3</option>
+                  <option value="20">20% Discount Applied</option>
+                  <option value="30">30% Discount Applied</option>
+                  <option value="40">40% Discount Applied</option>
                 </select>
               </div>
               <div className={styles.applyPromo}>
@@ -180,8 +195,14 @@ function Cart() {
                   className={styles.applyPromoInput}
                   type="text"
                   placeholder="Enter Promo Code"
+                  onChange={(e) => setGiftState(e.target.value)}
                 />
-                <button className={styles.applyPromoBtn}>Apply</button>
+                <button
+                  onClick={handleGiftCard}
+                  className={styles.applyPromoBtn}
+                >
+                  Apply
+                </button>
               </div>
               <div className={styles.priceDetails}>
                 <img
@@ -217,7 +238,7 @@ function Cart() {
                     alt=""
                   />
                   <p className={styles.cartPriceDetails_p}>Discount Applied:</p>
-                  <p>₹ 0.00</p>
+                  <p>₹ {discount}</p>
                 </div>
                 <div className={styles.cartPriceDetails}>
                   <img
@@ -226,7 +247,7 @@ function Cart() {
                     alt=""
                   />
                   <p className={styles.cartPriceDetails_p}>Amount Payable:</p>
-                  <p>₹ {total}.00</p>
+                  <p>₹ {total - discount}.00</p>
                 </div>
                 <i className={styles.tax}>Including ₹{tax} in taxes</i>
                 <div className={styles.delhivery}>

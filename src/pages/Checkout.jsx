@@ -5,14 +5,19 @@ import { MdDelete } from "react-icons/md";
 import styles from "./cartStyles.module.css";
 import { Navigate, useNavigate } from "react-router-dom";
 function Checkout() {
-  let total = localStorage.getItem("total");
-  let tax = localStorage.getItem("tax");
+  const cart = useSelector((state) => state);
+  const addition = (acc, curr) => {
+    return acc + curr.price * curr.quantity;
+  };
+  const total = cart.reduce(addition, 0);
+  const tax = (total * (18 / 100)).toFixed(2);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const cart = useSelector((state) => state);
   let person = JSON.parse(localStorage.getItem("person"));
-  console.log(person);
+  // console.log(person);
 
+  let promo = localStorage.getItem("discount");
+  const discount = (total * (Number(promo) / 100)).toFixed(2);
   const handlechangeAddress = () => {
     navigate("/guestCheckout");
   };
@@ -58,7 +63,7 @@ function Checkout() {
                 alt=""
               />
               <p>Discount Applied:</p>
-              <p className={styles2.box2_Inner_p}>₹ {0}.00</p>
+              <p className={styles2.box2_Inner_p}>₹ {discount}</p>
             </div>
             <div className={styles2.box2_Inner}>
               <img
@@ -67,7 +72,7 @@ function Checkout() {
                 alt=""
               />
               <p>Amount Payable:</p>
-              <p className={styles2.box2_Inner_p}>₹ {total}.00</p>
+              <p className={styles2.box2_Inner_p}>₹ {total - discount}.00</p>
             </div>
             <p className={styles2.tax}>
               <i>Including ₹ {tax} in taxes</i>
@@ -198,7 +203,7 @@ function Checkout() {
             <button
               onClick={gotoPaymentPage}
               className={styles2.last_div_btn2}
-            >{`Proceed to Payment(Rs. ${total}.00)`}</button>
+            >{`Proceed to Payment(Rs. ${total - discount}.00)`}</button>
           </div>
         </div>
       </div>

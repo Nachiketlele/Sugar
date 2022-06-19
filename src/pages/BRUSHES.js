@@ -6,6 +6,8 @@ import { useDispatch } from "react-redux";
 import img2 from "./imq2.jpg"
 import img3 from "./filterIcon.png"
 import { useNavigate } from "react-router-dom";
+import Offer from "./Offer";
+import Footer from "../components/Footer";
 const BRUSHES = () => {
   const { time, setsortval } = useContext(Box);
   const [love, setlove] = useState(false);
@@ -171,6 +173,7 @@ if(flag200===true)
           })}
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };
