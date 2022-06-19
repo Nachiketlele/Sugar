@@ -156,11 +156,7 @@ const Navbar = () => {
             className={styles.navbarSugarLogoPride}
             src="https://in.sugarcosmetics.com/desc-images/pride-logo-option.gif"
             alt="pride logo sugar"
-<<<<<<< HEAD
             onClick={()=>navigate("/")}
-=======
-            onClick={handleHome}
->>>>>>> 93a728ff3dd8729dc264d48c8e476146966f73e3
           />
           <div className={styles.navbarSugarInputSearchContainer}>
             <input
@@ -364,22 +360,13 @@ const Navbar = () => {
           </div>
 
           <div className={styles.setIcons}>
-<<<<<<< HEAD
             <i class="fa-solid fa-heart" style={{cursor:"pointer"}} onClick={()=>navigate("/wishlist")}></i>
             <i class="fa-solid fa-bag-shopping" style={{cursor:"pointer"}} onClick={()=>navigate("/cart")}></i>
-=======
-            <i onClick={handleWishlist} style={{cursor:"pointer"}} class="fa-solid fa-heart"></i>
-            <i onClick={handleCart} style={{cursor:"pointer"}} class="fa-solid fa-bag-shopping"></i>
->>>>>>> 93a728ff3dd8729dc264d48c8e476146966f73e3
             <img
               className={styles.setDiscountLogo}
               src="https://in.sugarcosmetics.com/desc-images/discountIcon.svg"
               alt=""
-<<<<<<< HEAD
               onClick={()=>navigate("/offers")}
-=======
-              onClick = {handleOffers}
->>>>>>> 93a728ff3dd8729dc264d48c8e476146966f73e3
             />
           </div>
         </div>

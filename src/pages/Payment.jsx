@@ -164,12 +164,12 @@ const navigate=useNavigate()
         </div>
         <p style={{marginBottom:"-1px",marginTop:"15px"}}>Expiration Date</p>
         <div style={{display:"flex",gap:"30px"}}>
-        <input style={{width:"70px"}}></input>
-        <input style={{width:"70px"}}></input>
+        <input style={{width:"70px"}} placeholder="month"></input>
+        <input style={{width:"70px"}} placeholder="year"></input>
         </div>
         
         <br></br>
-        <p style={{textAlign:"center"}}>Your current info is encrypted</p>
+        <p style={{textAlign:"center"}}>🔒 Your current info is encrypted</p>
         <button style={{background:"#1460f4", color:"white",border:"none",marginLeft:"100px"}} onClick={()=>navigate("/success")}>PROCEED →</button>
         </div>
         </div>
