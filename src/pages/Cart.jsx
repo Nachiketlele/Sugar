@@ -265,7 +265,7 @@ const getcoupon=()=>{
                 </div>
                 <i className={styles.tax}>Including ₹{tax} in taxes</i>
                 <div className={styles.delhivery}>
-                  <button className={styles.continueShop}>
+                  <button className={styles.continueShop} onClick={()=>navigate("/")}>
                     <span>{"<"}</span> Continue Shoping
                   </button>
                   <button
