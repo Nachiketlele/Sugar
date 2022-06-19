@@ -4,7 +4,9 @@ import "./Navbar.css";
 import styles from "../styles/Navbar.module.css";
 import stylesHp from "./login.module.css";
 import { useState } from "react";
+import { useRef } from "react";
 const Navbar = () => {
+  const ref12 = useRef("")
   let cat = [
     {
       id: 1,
@@ -142,6 +144,12 @@ const Navbar = () => {
       alert("Wrong OTP");
     }
   };
+
+
+  const handlesearch=()=>{
+    localStorage.setItem("search",ref12.current.value)
+    navigate("/search")
+  }
   // console.log(otp);
   return (
 
@@ -162,9 +170,10 @@ const Navbar = () => {
             <input
               className={styles.navbarSugarInputSearchBox}
               type="text"
-              placeholder='Try "Liquid Lipstick"'
+              placeholder='Try "Lipstick"'
+              ref={ref12}
             />
-            <button className={styles.navbarSugarInputSearchButton}>
+            <button className={styles.navbarSugarInputSearchButton} onClick={handlesearch}>
               Search
             </button>
           </div>

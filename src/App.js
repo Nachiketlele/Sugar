@@ -16,6 +16,7 @@ import Stores from "./pages/Stores";
 import Success from "./pages/Success";
 import Orders from "./pages/Orders";
 import PersonalInfo from "./pages/PersonalInfo";
+import Search from "./pages/Search";
 
 
 function App() {
@@ -52,6 +53,7 @@ function App() {
         <Route path="/success" element={<Success/>} />
         <Route path="/orders" element={<Orders/>} />
         <Route path="/personalinfo" element={<PersonalInfo/>} />
+        <Route path="/search" element={<Search/>} />
       </Routes>
     </div>
   );
