@@ -1,0 +1,45 @@
+.requestOTP {
+  margin-left: 17px;
+  margin-top: 10px;
+  width: 116px;
+}
+.inputOTP {
+  /* border: 1px solid red; */
+  background-color: white;
+  width: 90%;
+  margin-left: 17px;
+  margin-top: 10px;
+}
+.login {
+  margin: auto;
+  background-color: white;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+.mobile {
+  /* border: 1px solid; */
+  width: 96%;
+  height: 40px;
+}
+.loginInNav {
+  margin-top: 26px;
+}
+.loginInNav_button {
+  border: none;
+}
+.form_tag_div {
+  /* border: 1px solid red; */
+  width: 90%;
+  margin-left: 17px;
+  background-color: white;
+}
+.form_tag {
+  /* border: 1px solid red; */
+  height: 40px;
+}
+.submit {
+  background-color: white;
+  height: 60px;
+  padding-top: 10px;
+  /* border: 1px solid red; */
+}

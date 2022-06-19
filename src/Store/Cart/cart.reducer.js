@@ -1,7 +1,7 @@
 let cartData = JSON.parse(localStorage.getItem("cartItem")) || [];
 
 export const cartReducer = (cart = cartData, action) => {
-  console.log(action.payload);
+  // console.log(action.payload);
   switch (action.type) {
     case "ADD_TO_CART": {
       if (cartData === []) {

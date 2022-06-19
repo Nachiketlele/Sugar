@@ -3,26 +3,47 @@ import styles from "./Style.module.css";
 import { useNavigate } from "react-router-dom";
 import { useRef } from "react";
 
-
 const Map = () => {
-    const navigate=useNavigate()
-    const name=useRef("")
-    const company=useRef("")
-    const phone=useRef("")
-    const flat=useRef("")
-    const email=useRef("")
-    const apartment=useRef("")
-    const pin=useRef("")
-    const state=useRef("")
-    const city=useRef("")
-    const country=useRef('')
-   let obj={name:"User",company:"",phone:"",flat:"",email:"",apartment:"",pin:"",state:"",city:"",country:""}
-   
-   const handle=()=>{
-    obj={name:name.current.value,company:company.current.value,phone:phone.current.value,flat:flat.current.value,email:email.current.value,apartment:apartment.current.value,pin:pin.current.value,state:state.current.value,city:city.current.value,country:country.current.value}
-    localStorage.setItem("person",JSON.stringify(obj))
-   }
-   
+  const navigate = useNavigate();
+  const name = useRef("");
+  const company = useRef("");
+  const phone = useRef("");
+  const flat = useRef("");
+  const email = useRef("");
+  const apartment = useRef("");
+  const pin = useRef("");
+  const state = useRef("");
+  const city = useRef("");
+  const country = useRef("");
+  let obj = {
+    name: "User",
+    company: "",
+    phone: "",
+    flat: "",
+    email: "",
+    apartment: "",
+    pin: "",
+    state: "",
+    city: "",
+    country: "",
+  };
+
+  const handle = () => {
+    obj = {
+      name: name.current.value,
+      company: company.current.value,
+      phone: phone.current.value,
+      flat: flat.current.value,
+      email: email.current.value,
+      apartment: apartment.current.value,
+      pin: pin.current.value,
+      state: state.current.value,
+      city: city.current.value,
+      country: country.current.value,
+    };
+    localStorage.setItem("person", JSON.stringify(obj));
+  };
+
   return (
     <div>
       <div
@@ -101,7 +122,7 @@ const Map = () => {
           </button>
           <button
             style={{ backgroundColor: "#fc2779", color: "white" }}
-            onClick={handle}
+            onClick={() => navigate("/checkout")}
           >
             Save and use this address
           </button>
