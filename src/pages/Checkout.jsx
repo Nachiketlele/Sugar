@@ -44,7 +44,7 @@ function Checkout() {
                 src="https://in.sugarcosmetics.com/desc-images/CartSubtotal.svg"
                 alt=""
               />
-              <p>Cart Sub Total:</p>
+              <p >Cart Sub Total:</p>
               <p className={styles2.box2_Inner_p}>₹ {total}.00</p>
             </div>
             <div className={styles2.box2_Inner}>
@@ -72,19 +72,19 @@ function Checkout() {
                 alt=""
               />
               <p>Amount Payable:</p>
-              <p className={styles2.box2_Inner_p}>₹ {total - discount}.00</p>
+              <p className={styles2.box2_Inner_p} style={{fontWeight:"bold"}}>₹ {total - discount}.00</p>
             </div>
-            <p className={styles2.tax}>
+            <p className={styles2.tax} style={{paddingTop:"10px"}}>
               <i>Including ₹ {tax} in taxes</i>
             </p>
           </div>
-          <div className={styles2.box1}>
+          <div className={styles2.box1} style={{paddingTop:"30px"}}>
             <img
               className={styles2.box1_img}
               src="https://in.sugarcosmetics.com/desc-images/shopping_cart.svg"
               alt=""
             />
-            <p className={styles2.textdecoration}>Order Summary</p>
+            <p className={styles2.textdecoration} style={{fontSize:"20px"}}>Order Summary</p>
           </div>
           <div>
             {cart.map((item) => {
@@ -172,8 +172,8 @@ function Checkout() {
               <p className={styles2.box14_p}>Email</p>
               <b className={styles2.box14_b}>{person.email}</b>
             </div>
-            <div className={styles2.box15}>
-              <div className={styles2.box15_inner}>
+            <div className={styles2.box15} >
+              <div className={styles2.box15_inner} >
                 <p className={styles2.box15_p}>Delivery Address</p>
                 <button
                   className={styles2.changeAdd}

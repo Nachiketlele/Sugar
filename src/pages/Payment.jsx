@@ -19,6 +19,8 @@ function Payment() {
   let promo = localStorage.getItem("discount");
   const discount = (total * (Number(promo) / 100)).toFixed(2);
   
+const navigate=useNavigate()
+
   const [state1, setState1] = useState();
   console.log(state1);
   return (
@@ -144,6 +146,33 @@ function Payment() {
               );
             })}
           </div>
+        </div>
+        <div style={{ height:"500px", width:"500px",marginLeft:"300px",background:"#1460f4"}}>
+        <div style={{ height:"400px", width:"400px",borderRadius:"20px",margin:"auto",marginTop:"50px"}}>
+        <div style={{width:"80%",margin:"auto",height:"80%",marginTop:"50px"}}>
+        <br/><br/>
+        <p style={{marginBottom:"-1px"}}>Card Holder Name</p>
+        <input></input>
+        <br/>
+        <div style={{display:"flex"}}>
+          <div><p style={{marginBottom:"-1px",marginTop:"15px"}}>Card Number</p>
+        <input style={{width:"250px"}}></input></div>
+        <div style={{marginLeft:"20px",marginTop:"15px"}}>
+        <p style={{marginBottom:"-1px"}}>CVV</p>
+        <input style={{width:"50px"}}></input>
+        </div>
+        </div>
+        <p style={{marginBottom:"-1px",marginTop:"15px"}}>Expiration Date</p>
+        <div style={{display:"flex",gap:"30px"}}>
+        <input style={{width:"70px"}}></input>
+        <input style={{width:"70px"}}></input>
+        </div>
+        
+        <br></br>
+        <p style={{textAlign:"center"}}>Your current info is encrypted</p>
+        <button style={{background:"#1460f4", color:"white",border:"none",marginLeft:"100px"}} onClick={()=>navigate("/success")}>PROCEED →</button>
+        </div>
+        </div>
         </div>
         {/* <div className={styles2.Container_2} style={{ border: "1px solid " }}>
           <div className={styles2.box1} style={{ height: "20px" }}>

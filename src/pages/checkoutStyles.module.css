@@ -23,7 +23,7 @@ p {
   height: 20px;
   width: 20px;
   background-color: #f5f5f5;
-  margin-top: -0px;
+  margin-top: 6px;
   margin-right: 5px;
 }
 /* .box2 {
@@ -31,7 +31,8 @@ p {
 } */
 .box2_Inner {
   display: flex;
-  height: 25px;
+  height: 35px;
+  /* border: red solid; */
 }
 .box2_Inner_img {
   height: 20px;
@@ -166,9 +167,14 @@ p {
 .box16_outer {
   /* border: 1px solid; */
   /* width: 200px; */
+  height:100px;
   border-radius: 10px;
+  padding-top: 10px;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px,
     rgb(209, 213, 219) 0px 0px 0px 1px inset;
+}
+.box16_outer>p{
+  font-weight: bold;
 }
 .box16_outer_1 {
   margin-top: -20px;

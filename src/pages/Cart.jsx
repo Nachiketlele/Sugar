@@ -22,6 +22,12 @@ function Cart() {
   const addition = (acc, curr) => {
     return acc + curr.price * curr.quantity;
   };
+
+const getcoupon=()=>{
+  let y=localStorage.getItem("coupon")
+  alert(`Copied coupon is ${y} `)
+}
+
   const total = cart.reduce(addition, 0);
   localStorage.setItem("total", total);
   const tax = (total * (18 / 100)).toFixed(2);
@@ -29,7 +35,7 @@ function Cart() {
   // console.log(giftState);
   localStorage.setItem("discount", promo);
   const handleGiftCard = () => {
-    if (giftState === "SUGAR15") {
+    if (giftState === "GJ1499"||giftState === "GJMMIL"||giftState === "GJNRGG"||giftState === "GJ699"||giftState === "GJ1099"||giftState === "GJGJ1999"||giftState === "GJ2499"||giftState === "SUGARNEW") {
       setPromo(15);
     }
   };
@@ -179,9 +185,9 @@ function Cart() {
                   <option value="0">
                     Available Offers/Promos for you! (Click to Expand)
                   </option>
-                  <option value="20">20% Discount Applied</option>
-                  <option value="30">30% Discount Applied</option>
-                  <option value="40">40% Discount Applied</option>
+                  <option value="5">5% Discount Applied</option>
+                  <option value="8">8% Discount Applied</option>
+                  <option value="10">10% Discount Applied</option>
                 </select>
               </div>
               <div className={styles.applyPromo}>
@@ -202,6 +208,14 @@ function Cart() {
                   className={styles.applyPromoBtn}
                 >
                   Apply
+                </button>
+                <button
+                  onClick={handleGiftCard}
+                  className={styles.applyPromoBtn}
+                  style={{marginLeft:"15px",width:"200px"}}
+                  onClick={getcoupon}
+                >
+                  View copied coupon
                 </button>
               </div>
               <div className={styles.priceDetails}>

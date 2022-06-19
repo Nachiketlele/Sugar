@@ -14,7 +14,8 @@ import { useState } from 'react';
 const Wishlist = () => {
     const navigate= useNavigate();
     const [favlist, setfavlist] = useState([])
-   let per= JSON.parse(localStorage.getItem("person"))||"";
+    let v=JSON.parse(localStorage.getItem("person"))
+   let per= JSON.parse(localStorage.getItem("firstname"))||v.name;
   let starlist,g;
     // const dispatch=useDispatch()
   const handledelete=(val)=>{
@@ -54,10 +55,10 @@ useEffect(() => {
   return (
     <div>
         <div style={{display:"flex",marginLeft:"30px"}}><img style={{marginTop:"3px"}} src='https://in.sugarcosmetics.com/desc-images/breadcrumb_home.svg' id={styles.e1} alt="no" onClick={()=>navigate("/")}/><p> / Account / Wishlist</p></div>
-        <div style={{display:"flex",marginLeft:"30px"}}><img style={{marginTop:"3px"}} src={person} id={styles.e1} alt="no" onClick={()=>navigate("/")}/><p> Hi, {per.name} !</p></div>
+        <div style={{display:"flex",marginLeft:"30px"}}><img style={{marginTop:"3px"}} src={person} id={styles.e1} alt="no" onClick={()=>navigate("/")}/><p style={{fontWeight:"bold"}}> Hi, {per} !</p></div>
         <div id={styles.v1}>
-            <img src={pic1} alt="no" onClick={()=>navigate("/account/orders")}/>
-            <img src={pic2} alt="no" onClick={()=>navigate("/account/addresses")}/>
+            <img src={pic1} alt="no" onClick={()=>navigate("/orders")}/>
+            <img src={pic2} alt="no" onClick={()=>navigate("/personalinfo")}/>
             {/* <img src={pic3} alt="no" /> */}
             {/* <img src={pic4} alt="no" /> */}
         </div>
@@ -67,7 +68,7 @@ useEffect(() => {
             return (
               <div className={styles.q6} key={e.id}>
                 <div className={styles.q22}>
-                <img className={styles.q23} src='https://biohack.ae/wp-content/uploads/2019/01/white-close-button-png-16.png' alt="no" style={{height:"20px", width:"20px",marginTop:"-10px",marginLeft:"300px"}} onClick={()=>{handledelete(e.id)}}/>
+                <img className={styles.q23} src='https://biohack.ae/wp-content/uploads/2019/01/white-close-button-png-16.png' alt="no" style={{height:"20px", width:"20px",marginTop:"5px",marginLeft:"300px"}} onClick={()=>{handledelete(e.id)}}/>
                   {" "}
                   <img src={e.src} alt="no" />{" "}
                   <p className={styles.name}>{e.name}</p>{" "}

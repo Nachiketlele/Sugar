@@ -42,6 +42,7 @@ const Map = () => {
       country: country.current.value,
     };
     localStorage.setItem("person", JSON.stringify(obj));
+    navigate("/checkout")
   };
 
   return (
@@ -55,7 +56,7 @@ const Map = () => {
           padding: "20px 0px 0px 0px",
         }}
       >
-        <div
+        {/* <div
           style={{
             width: "30%",
             height: "45px",
@@ -67,15 +68,15 @@ const Map = () => {
             justifyContent: "center",
           }}
         >
-          <div>Login/Sign Up</div>
+          <div onClick={()=>navigate("")}>Login/Sign Up</div>
           <img
             style={{ height: "30px", width: "30px", marginTop: "5px" }}
             src="https://in.sugarcosmetics.com/guestCheckout/forwardbutton.svg"
             alt="no"
           />
-        </div>
-        <p style={{ backgroundColor: "#f6e1e9" }}>OR</p>
-        <p style={{ backgroundColor: "#f6e1e9" }}>Register</p>
+        </div> */}
+        {/* <p style={{ backgroundColor: "#f6e1e9",textAlign:"center" }}>OR</p> */}
+        <p style={{ backgroundColor: "#f6e1e9", textAlign:"center", fontWeight:"bold" }}>Register</p>
         <div
           style={{
             display: "flex",
@@ -122,7 +123,7 @@ const Map = () => {
           </button>
           <button
             style={{ backgroundColor: "#fc2779", color: "white" }}
-            onClick={() => navigate("/checkout")}
+            onClick={handle}
           >
             Save and use this address
           </button>

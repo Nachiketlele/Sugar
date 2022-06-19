@@ -12,6 +12,10 @@ import Payment from "./pages/Payment";
 import SingleItem from "./pages/SingleItem";
 import Offer from "./pages/Offer";
 import Wishlist from "./pages/Wishlist";
+import Stores from "./pages/Stores";
+import Success from "./pages/Success";
+import Orders from "./pages/Orders";
+import PersonalInfo from "./pages/PersonalInfo";
 
 
 function App() {
@@ -44,6 +48,10 @@ function App() {
         <Route path="/guestCheckout" element={<Map />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/payments" element={<Payment />} />
+        <Route path="/stores" element={<Stores/>} />
+        <Route path="/success" element={<Success/>} />
+        <Route path="/orders" element={<Orders/>} />
+        <Route path="/personalinfo" element={<PersonalInfo/>} />
       </Routes>
     </div>
   );

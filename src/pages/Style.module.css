@@ -43,6 +43,13 @@ img {
   justify-content: space-between;
 }
 
+.q22{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .q6:hover .q7{
   visibility: visible;
 }
@@ -173,6 +180,19 @@ img {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     background-color: white;
   }
+ 
   .q23:hover{
     cursor: pointer;
+  }
+
+  .q200 {
+    background-color: #ffffff;
+    height: 250px;
+    width:45%;
+    margin:auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 10px;
+    justify-content: center;
   }

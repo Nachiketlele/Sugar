@@ -144,6 +144,7 @@ const Navbar = () => {
             className={styles.navbarSugarLogoPride}
             src="https://in.sugarcosmetics.com/desc-images/pride-logo-option.gif"
             alt="pride logo sugar"
+            onClick={()=>navigate("/")}
           />
           <div className={styles.navbarSugarInputSearchContainer}>
             <input
@@ -237,6 +238,7 @@ const Navbar = () => {
                         // class="btn btn-secondary"
                         // data-bs-dismiss="modal"
                         // id="basic-addon2"
+                        className={verify?stylesHp.q1:null}
                       >
                         {verify ? "Verified" : "Verify OTP"}
                       </button>
@@ -296,9 +298,9 @@ const Navbar = () => {
                         aria-describedby="basic-addon2"
                         name="email"
                       />
-                      <span class="input-group-text" id="basic-addon2">
+                      {/* <span class="input-group-text" id="basic-addon2">
                         @gmail.com
-                      </span>
+                      </span> */}
                     </div>
                     <div className={stylesHp.form_tag}>
                       <div class="input-group mb-3">
@@ -346,12 +348,13 @@ const Navbar = () => {
           </div>
 
           <div className={styles.setIcons}>
-            <i class="fa-solid fa-heart"></i>
-            <i class="fa-solid fa-bag-shopping"></i>
+            <i class="fa-solid fa-heart" style={{cursor:"pointer"}} onClick={()=>navigate("/wishlist")}></i>
+            <i class="fa-solid fa-bag-shopping" style={{cursor:"pointer"}} onClick={()=>navigate("/cart")}></i>
             <img
               className={styles.setDiscountLogo}
               src="https://in.sugarcosmetics.com/desc-images/discountIcon.svg"
               alt=""
+              onClick={()=>navigate("/offers")}
             />
           </div>
         </div>
@@ -419,7 +422,7 @@ const Navbar = () => {
         <Link className="grow" to="/offers">
           OFFERS
         </Link>
-        <Link className="grow" to="/">
+        <Link className="grow" to="/stores">
           STORES
         </Link>
       </div>
