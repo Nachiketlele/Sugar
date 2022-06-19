@@ -20,6 +20,37 @@ const MAKEUP = () => {
   let r = JSON.parse(localStorage.getItem("list2"));
   let favArr = JSON.parse(localStorage.getItem("fav")) || [];
   const [list2, setlist2] = useState(r);
+
+
+  let qwer = JSON.parse(localStorage.getItem("list2"));
+ 
+
+
+  const handle1 = (e) => {
+    let r=e.target.value;
+    if(r==='1')
+    {let qwer = JSON.parse(localStorage.getItem("list2"));
+      setlist2(qwer.filter(e=>e.name.includes("Lipstick")))
+    }
+    else if(r==='2')
+    { let qwer = JSON.parse(localStorage.getItem("list2"));
+      setlist2(qwer.filter(e=>e.name.includes("Contour")))
+    }
+    else if(r==='3')
+    {
+      let qwer = JSON.parse(localStorage.getItem("list2"));
+      setlist2(qwer.filter(e=>e.name.includes("Kajal")))
+    }
+    else
+    {
+      let qwer = JSON.parse(localStorage.getItem("list2"));
+      setlist2(qwer)
+    }
+  };
+
+
+
+
   const thelove = (val) => {
     for (let i = 0; i < list2.length; ++i) {
       if (val === list2[i].id) list2[i].love = !list2[i].love;
@@ -80,10 +111,18 @@ if(flag200===true)
         <div>
         <div style={{display:"flex"}}><img onClick={()=>navigate("/")} style={{marginTop:"3px"}} src='https://in.sugarcosmetics.com/desc-images/breadcrumb_home.svg' id={styles.e1} alt="no"/><p> / Makeup</p></div>
           <br></br>
-          <div>Makeup - 56 items</div>
+          <div>Makeup - 16 items</div>
         </div>
         <div className={styles.q5}>
-        <div style={{display:"flex"}}><img style={{marginTop:"3px"}} src='https://in.sugarcosmetics.com/desc-images/filterIcon.png' id={styles.e1} alt="no" /><p>Filter</p></div>
+        <div style={{marginLeft:"-100px"}}>
+              <select style={{border:"0px"}} onChange={handle1}>
+                <option>Filter by</option>
+                <option value="1">Lipstick</option>
+                <option value="2">Kajal</option>
+                <option value="3">Contour</option>
+                <option value="4">Remove filters</option>
+              </select>
+            </div>
           <div>
             <select onChange={handle}>
               <option>Sort by</option>
