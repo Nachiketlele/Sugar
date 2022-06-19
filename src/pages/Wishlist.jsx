@@ -9,11 +9,12 @@ import pic4 from './pic4.jpg'
 import img1 from "./star_filled.png";
 import { useEffect } from 'react';
 import { useState } from 'react';
-// import { useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 const Wishlist = () => {
     const navigate= useNavigate();
     const [favlist, setfavlist] = useState([])
+    const dispatch = useDispatch();
    let per= localStorage.getItem("person")
   let starlist,g;
     // const dispatch=useDispatch()
@@ -79,11 +80,11 @@ useEffect(() => {
                   </div>
                   <div
                     className={styles.q7}
-                    // onClick={() =>
-                    //   useDispatch({ type: "SHOP NOW", payload: e })
-                    // }
+                    onClick={() =>
+                      dispatch({ type: "ADD_TO_CART", payload: e })
+                    }
                   >
-                    SHOP NOW{" "}
+                    ADD TO CART{" "}
                   </div>
                   
                 </div>
