@@ -19,7 +19,7 @@ import girl7 from './7.mp4'
 import girl8 from './8.mp4'
 
 let arr = [
-  {obj: `${girl1}`,id:1},{obj:`${girl2}`,id:2},{obj:`${girl3}`,id:3},{obj:`${girl4}`,id:4},{obj:`${girl5}`,id:5},{obj:`${girl6}`,id:6},{obj:`${girl7}`,id:7},{obj:`${girl8}`,id:8}
+  {obj: `${girl1}`,id:1},{obj:`${girl2}`,id:2},{obj:`${girl3}`,id:3},{obj:`${girl5}`,id:4},{obj:`${girl4}`,id:5},{obj:`${girl6}`,id:6},{obj:`${girl7}`,id:7},{obj:`${girl8}`,id:8}
 ]
 
 const Part2 = () => {
@@ -59,7 +59,7 @@ const Part2 = () => {
         {arr.map((el)=>(
       <div className="each-slide" key={el.id} id={Style.ds}>
         <div>
-         <iframe id={Style.fr}
+         <video id={Style.fr}
           width="100%"
           height="100%"
           src={el.obj}
@@ -67,7 +67,8 @@ const Part2 = () => {
           frameBorder="0"
           allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
-        ></iframe>
+          controls
+        ></video>
         </div>
       </div>
       ))}

@@ -118,8 +118,8 @@ if(flag200===true)
               <select style={{border:"0px"}} onChange={handle1}>
                 <option>Filter by</option>
                 <option value="1">Lipstick</option>
-                <option value="2">Kajal</option>
-                <option value="3">Contour</option>
+                <option value="2">Contour</option>
+                <option value="3">Kajal</option>
                 <option value="4">Remove filters</option>
               </select>
             </div>
