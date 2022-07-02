@@ -9,5 +9,5 @@
 <a href="https://github.com/Harishankar999">Harishankar</a>
 <br>
 <a href="https://github.com/DeveloperShubhamKapoor">Shubham Kapoor</a>
-<img src="https://drive.google.com/file/d/1JXNNHhzKtmBjZAQ9tFKuNxfKs1vpbWnU/view?usp=sharing"/>
+<img src="https://drive.google.com/file/d/0B7gSTmiIbae9aWhpM2NIUFk1Mm8/view?usp=sharing&resourcekey=0-Yx-SHygC4yLWpt3ZQStxmQ"/>
 
