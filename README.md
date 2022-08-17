@@ -10,13 +10,25 @@
 <p>2) Redux</p>
 <p>3) Chakra Ui</p>
 
-<h4>TEAM MEMBERS</h4>
-<a href="https://github.com/Rahul-Rajeevan">Rahul Rajeevan</a>
+<h2>Screenshots of the Project :</h2>
+<hr>
 <br>
-<a href="https://github.com/Nachiketlele">Nachiket Lele</a>
+<img src="./sugar.png"/>
 <br>
-<a href="https://github.com/Harishankar999">Harishankar</a>
 <br>
-<a href="https://github.com/DeveloperShubhamKapoor">Shubham Kapoor</a>
+<img src="./sugar1.png"/>
+<br>
+<br>
+<img src="./sugar2.png"/>
+<br>
+<br>
+<h2>TEAM MEMBERS :</h2>
+Rahul Rajeevan
+<br>
+Nachiket Lele
+<br>
+Harishankar
+<br>
+Shubham Kapoor
 
 
