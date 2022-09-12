@@ -16,6 +16,7 @@ Nachiket Lele
 <br>
 Harishankar
 <br>
+Shubham Kapoor
 <h2>Screenshots of the Project :</h2>
 <hr>
 <br>
@@ -29,5 +30,5 @@ Harishankar
 <br>
 <br>
 
-Shubham Kapoor
+
 <img src="https://raw.githubusercontent.com/Trilokia/Trilokia/379277808c61ef204768a61bbc5d25bc7798ccf1/bottom_header.svg" />
