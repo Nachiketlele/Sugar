@@ -9,7 +9,13 @@
 <p>1) React</p>
 <p>2) Redux</p>
 <p>3) Chakra Ui</p>
-
+<h2>TEAM MEMBERS :</h2>
+Rahul Rajeevan
+<br>
+Nachiket Lele
+<br>
+Harishankar
+<br>
 <h2>Screenshots of the Project :</h2>
 <hr>
 <br>
@@ -22,12 +28,6 @@
 <img src="./sugar2.png"/>
 <br>
 <br>
-<h2>TEAM MEMBERS :</h2>
-Rahul Rajeevan
-<br>
-Nachiket Lele
-<br>
-Harishankar
-<br>
+
 Shubham Kapoor
 <img src="https://raw.githubusercontent.com/Trilokia/Trilokia/379277808c61ef204768a61bbc5d25bc7798ccf1/bottom_header.svg" />
